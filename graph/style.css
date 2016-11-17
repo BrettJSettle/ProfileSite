@@ -1,0 +1,502 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+@import url(https://fonts.googleapis.com/css?family=Arimo);
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+
+.home{
+  position:absolute;
+  bottom:0;
+  height:20px;
+  background:#ccc;
+  width:100%;
+  z-index:999;
+  left:0;
+  right:0;
+}
+
+.selected {
+    lineColor: red;
+    line-color: red;
+    background-color: red;
+}
+
+body {
+  margin:0;
+  font-family: verdana;
+}
+
+textarea,
+pre {
+  font-size: 20px;
+  -moz-tab-size : 2;
+    -o-tab-size : 2;
+       tab-size : 2;
+}
+
+.btn-right {
+  float:right;
+  margin-left: 5px;
+}
+.btn-left {
+  float:left;
+  margin-right:5px;
+}
+
+.row-btn {
+  padding: 0.3125rem;
+  background: #eaeaea;
+  color: #777;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  font-family: verdana;
+  font-size: 1em;
+  text-shadow: rgba(255,255,255,0.5) 0 1px 2px;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+}
+
+.btn-active{
+  background: #E9CACA;
+  color: #444;
+}
+
+.script-row {
+  display: inline-block;
+  position:relative;
+  width:100%;
+  padding-bottom:3px;
+}
+
+#console {
+  direction:ltr;
+  resize:none;
+  height:100%;
+  border-color: black;
+}
+
+#console-area {
+  height:100%;
+  font-size:15px;
+}
+
+.script {
+  font-size:15px;
+  z-index: 100;
+  position:absolute;
+  right:0;
+  padding:3px;
+  display:block;
+  background-color: white;
+  border-bottom: solid 2px;
+  border-left: solid 2px;  
+  min-width:150px;
+  border-radius: 0 0 0 5px;
+}
+
+.fadeout {
+  position: relative; 
+  bottom: 4em;
+  height: 4em;
+  right:22px;
+  pointer-events: none
+  background: -webkit-linear-gradient(
+      rgba(247, 247, 247, 0) 0%,
+      rgba(247, 247, 247, 1) 100%
+  ); 
+  background-image: -moz-linear-gradient(
+      rgba(247, 247, 247, 0) 0%,
+      rgba(247, 247, 247, 1) 100%
+  );
+  background-image: -o-linear-gradient(
+      rgba(247, 247, 247, 0) 0%,
+      rgba(247, 247, 247, 1) 100%
+  );
+  background-image: linear-gradient(
+      rgba(247, 247, 247, 0) 0%,
+      rgba(247, 247, 247, 1) 100%
+  );
+  background-image: -ms-linear-gradient(
+      rgba(247, 247, 247, 0) 0%,
+      rgba(247, 247, 247, 1) 100%
+  );
+} 
+
+#script-area {
+  display:none;
+  height:300px;
+  width:300px;
+  direction:rtl;
+  resize:both;
+  overflow:hidden;
+  padding-bottom:15px;
+  position:relative;
+}
+
+.jscolor {
+  text-align:center;
+  width:150px;
+}
+label {
+  padding-right: 5px;
+}
+
+.col-right {
+  right:0;
+}
+.col-left {
+  left:0;
+  text-align: right;
+}
+
+.home p {
+  margin: 0;
+  text-align: right;
+  font-size:13px;
+  padding-right:10px;
+}
+
+#cyto {
+  position: fixed;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:20px;
+}
+
+/* you can set the disabled style how you like on the text/icon */
+.cxtmenu-disabled {
+  opacity: 0.333;
+}
+
+.sidebar {
+  position:fixed;
+  left: 0;
+  vertical-align: center;
+  width: 50px;
+  height: 200px;
+  z-index: 999;
+}
+
+.sidebar input[type=radio] {
+   display: none;
+}
+
+.sidebar label {
+  border-radius: 10px;
+  display:block;
+  width:40px;
+  height:50px;
+  border: outset 1px silver;
+  background: #ddd;
+  text-align:center;
+}
+
+i {
+  line-height: 50px;
+}
+
+.sidebar input:checked + label {
+  border: inset 1px silver;   
+  background: #aaa;
+  color: blue;
+}
+
+#textInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 999;
+    size: 10;
+    width: 300px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 35px;
+}
+
+#settings-item {
+  transition: visibility 1000ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+
+.modal-body p {
+  display: inline-block;
+}
+
+.fa-rotate-45 {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#shapeToggler, #edgeToggler {
+  background-color: white;
+}
+
+#shapeview, #edgeView{
+  height: 2em;
+  width: auto;
+  line-height: 2em;
+  border: none;
+  text-indent: 0;  
+}
+
+div.scrollmenu {
+  position:fixed;
+  background-color: #333;
+  overflow-x: auto;
+  overflow-y:hidden;
+  white-space: nowrap;
+  height:auto;
+}
+
+div.scrollmenu i {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding:10px;
+  font-size:2em;
+}
+
+div.scrollmenu i:hover {
+  color: #fafaaa;
+}
+
+.settings-box button {
+  width:3em;
+  height:2.7em;
+  padding:0px;
+}
+.settings-box select, .settings-box input {
+  width: 3em;
+  height:2em;
+  color: black;
+}
+
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css");
+.menu {
+    position: fixed;
+    vertical-align: center;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    z-index:10;  
+    overflow:hidden;
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+}
+.menu li i{
+  display: block;
+  text-indent: -500em;
+  height: 3em;
+  width: 100%;
+  line-height: 3em;
+  text-align:center;
+  color: #72739f;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.1s ease-in-out;
+}
+.menu li i:before {
+  font-family: FontAwesome;
+  speak: none;
+  text-indent: 0em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+}
+.menu-bar li i:before {
+  font-family: FontAwesome;
+  speak: none;
+  text-indent: 0em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
+}
+.menu-bar li i.tool:before {
+  content: "\f1fc";
+}
+.menu li i.erase:before {
+  content: "\f118";
+}
+.menu li i.mouse:before {
+  content: "\f245";
+}
+.menu li i.addNode:before {
+  content: "\f055";
+}
+.menu li i.addEdge:before {
+  content: "\f222";
+}
+
+.menu li:active {
+  background: #dddddd;
+}
+
+.inp-select {
+     position:relative;
+     background-color:white;
+     border:solid grey 1px;
+     width:120px;
+     height:18px;
+     margin-bottom: 20px;
+}
+
+.inp-select select {
+     position:absolute;
+     top:0px;
+     left:0px;
+     font-size:14px;
+     border:none;
+     width:120px;
+     margin:0;
+}
+
+.inp-select input {
+     position:absolute;
+     top:0px;
+     left:0px;
+     width:100px;
+     padding:1px;
+     font-size:12px;
+     border:none;
+}
+
+.inp-select select:focus, .inp-select input:focus {
+    outline:none;
+}
+
+.settings-item select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+#modal-text {
+    height: 406px;
+    display: block;
+    word-wrap: normal;
+    width: 100%;
+    margin: 0px -9px 0px 0px;
+    resize:vertical;
+    font-size:14px;
+    word-break: break-all;
+}
+
+.menu-bar{
+    overflow:hidden;
+    left:5em;
+    z-index:5;
+    width:0;
+    height:0;
+    transition: all 0.1s ease-in-out;
+}
+.menu-bar li i{
+  display: block;
+  height: 4em;
+  line-height: 4em;
+  text-align:center;
+  color: #72739f;
+  text-decoration:none;  
+  position: relative;
+  font-family:verdana;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.1s ease-in-out;
+}
+
+.settings-menu {
+  background-color: white;
+  border-left: solid #333388;
+  padding-left:20px;
+  padding-right:20px;
+  height:100%;
+  right:0;
+  width:16em;
+  position:absolute;
+  display:block;
+  z-index:1000;
+}
+
+.modules div, .modules select, .modules input {
+  margin: 1em;
+  cursor: pointer;
+}
+
+.modules div.enabled b {
+    color: darkblue;
+}
+
+.modules div.disabled b {
+    color: darkred;
+}
+
+.para{
+    color:#033f72;
+    padding-left:100px;
+    font-size:3em;
+    margin-bottom:20px;
+}
+
+.open{
+    width:10em;
+    height:100%;
+}
+
+@media all and (max-width: 500px) {
+    .container{
+        margin-top:100px;
+    }
+    .open{
+        width:100%;
+        height:auto;
+    }
+    .para{
+    padding-left:5px;
+    }  
+    #modal-text {
+      height:200px;
+    }
+}
+
+
+.frame {
+  width:90%;
+  height:90%;
+  margin: auto;
+  position:relative;
+  background-color:white;
+  top:50px;
+  border:black solid;
+}
+
+.frame input {
+  float:left;
+  background-color:black;
+  color:white;
+  border-width:0px;
+  position:absolute;
+}
+.run-button {
+  position: absolute;
+  right: 0;
+  z-index: 100;
+  color: #69f;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 2px;
+  padding: 10px;
+  font-size: 1.25em;
+  top: 0;
+}
