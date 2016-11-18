@@ -166,6 +166,9 @@ tr.blue-bar {
     font-size: .8em;
 }
 
+#regRow td {
+    vertical-align: middle;
+}
 
 .ruleTable {
   margin: 1em 0;
