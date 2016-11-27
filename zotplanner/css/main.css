@@ -1,93 +1,177 @@
-#content {
-  width: 100%;
-  height: 100%;
-  padding: 0px;
-  background-image: url("back.png");
+html { height: 100%; }
+body {
+	height: 100%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+	color: #333;
+}
+a {
+	color: #aaa;
 }
 
-div {
-  padding: 5px;
-  overflow:auto;
+#left {
+	width: 50%;
+	float: left;
 }
 
-.profile {
-  display: flex;
+#right {
+	width: 50%;
+	height: 100%;
+	float: left;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch; /* for iOS */
 }
 
-#login .action {
-  margin-top: 10px;
-}
-
-#degreeworks .action, #search, #clearSearch {
-  width: 100%;
-  top: 0;
-  color: #003659;
-  background-color: #999;
-  font-weight: 700;
-}
-
-#usrid, #pwd, #ucinetid_auth, #call {
-  float: right;
-}
-
-#degreeworks, #websoc {
-  background-color: white;
-}
-
-#websoc-results {
-  width:100%;
-}
-
-#websoc-search table {
-  table-layout: fixed;
-}
-
-#websoc-search td {
-  width: 50%;
+#upper {
+	overflow: auto;
+	padding: 5px;
 }
 
 #websoc-search select, #websoc-search input {
-  width:100%;
+    width: 100%;
 }
 
-#login {
-  background: #f1f1e7;
-  border: 1px solid #ddd;
-  height: 102px;
-  width: 264px;
-  display: table;
+#upper h1 {
+	line-height: 20px;
 }
 
-#login ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  padding-bottom: 5px;
+#upper #main-nav {
+	float: left;
 }
 
-.example {
-  font-size: 0.8em;
-  color: #666;
-  margin-left: 80px;
-  clear: both;
+#upper #cal-ctrl {
+	float: right;
 }
 
-#login label {
-  font-weight: 800;
-  float: left;
-  width: 75px;
-  padding-top: 5px;
-  text-align: right;
-  padding-right: 3px;
+#main-nav h1 {
+	display: inline;
 }
 
-.col {
-  float: left;
-  border: solid 2px;
+.btn {
+	border: 1px solid transparent;
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
-.DivLogoutMsg, .WebRegErrorMsg {
-  margin: 0;
+.btn:focus {
+	outline: 0 none;
+}
+
+.btn.active {
+	background-color: #e6e6e6;
+	border-color: #adadad;
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.125)
+}
+
+.btn:hover {
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+.btn-primary:hover {
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+#cal {
+	position: relative;
+}
+#soc {
+	height: 100%;
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+/* weekly calendar overrides */
+.wc-header {
+	background: #fff;
+}
+.wc-cal-event {
+	font-size: 10px !important;
+	border: none;
+}
+
+@media print {
+	#left {
+		width: 100%;
+	}
+	#upper, #soc {
+		display: none;
+	}
+
+	.wc-scrollable-grid {
+		height: 1200px !important;
+	}
+
+	.wc-cal-event {
+		font-size: 10px !important;
+		border: 1px solid black;
+	}
+}
+
+#websoc-search td {
+    width: 50%;
+}
+
+tr.blue-bar {
+    height:7px;
+}
+
+/* New CSS! */
+#login-modal {font-family: Verdana, sans-serif; background: #036 url("https://login.uci.edu/ucinetid/images/bg2.jpg");}
+#login-modal h1, #login-modal h2,#login-modal h3,#login-modal h4,#login-modal h5,#login-modal h6 {font-size: 1.0em; padding: 0; margin: 0; color: #036;}
+#login-modal h2 {font-size: 1.4em;}
+#login-modal a {color: #036;}
+
+#login-modal div#webauth-container {margin: 0 auto; background-color: #fff; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
+
+#login-modal div#webauth-container div#header {background: #fff url("https://login.uci.edu/ucinetid/images/banner2.jpg") no-repeat 0 0; height: 77px;}
+
+#login-modal div#title-bar {margin-top: 3px; background-color: #358; padding: 5px 8px 4px 8px; color: #fff;}
+#login-modal div#title-bar div#application-title {float: left; font-weight: 800;}
+#login-modal div#title-bar div#login-status {float: right; font-size: 0.8em; padding-top: 1px;}
+#login-modal div#title-bar div#login-status a {color: #fff; text-decoration: underline}
+
+#login-modal div.clearer {clear: both; height: 1px; overflow: hidden;}
+
+#login-modal div#information-area {float: left; padding: 4px; width: 350px;}
+#login-modal div#login-area {float: right; width: 350px; background: #f1f1e7; padding: 8px; border: 1px solid #ddd;}
+
+#login-modal div#content-container {padding: 4px; font-size: 0.8em;}
+
+#login-modal div#footer {margin: 4px; border-top: 1px solid #ddd; font-size: 10px; color: #666; text-align: center; padding: 10px;}
+
+#login-modal div#login-area ul {padding: 0; margin: 0; list-style-type: none;}
+#login-modal div#login-area ul li {padding: 5px 0; margin: 0; clear: both;}
+#login-modal div#login-area ul li .example {font-size: 0.8em; color: #666; margin-left: 80px; clear: both;}
+#login-modal div#login-area ul li.button-bar {padding-left: 78px;}
+
+#login-modal div#status {background: #f8e3cd url("../images/alert.png") no-repeat 4px 6px; padding: 6px 6px 6px 22px; display: none;}
+
+#login-modal label {font-weight: 800; float: left; width: 75px; padding-top: 5px; text-align: right; padding-right: 3px;}
+#login-modal input {float: left; vertical-align: middle; font-size: 1.2em;}
+#login-modal input[type=submit] {float: none; font-size: 1.0em;}
+
+#login-modal #forgot-password {clear: both; text-align: right; padding: 4px; border-top: 1px solid #ddd; display: block; margin-top: 8px;}
+
+#login-modal #alerts {background: #f8e3cd url("../images/alert.png") no-repeat 4px 6px; padding: 6px 6px 6px 22px; margin-bottom: 6px;}
+
+#login-modal .ruleTable input {
+    font-size: .8em;
+}
+
+#regRow td {
+    vertical-align: middle;
 }
 
 .ruleTable {
@@ -123,8 +207,13 @@ div {
   width:50%;
   padding: 0px;
   color: black;
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
+
+.ruleTable input {
+  font-size:15px;
+}
+
 .ruleTable th:first-child {
   display: table-cell;
   border-top-left-radius: 10px;
