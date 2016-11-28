@@ -28,8 +28,8 @@
  
  */
 
-tr.bgLight100:hover, tr.bgLight0:hover {
-    background-color: rgba(0, 150, 250, .1);
+tr.bgLight100:hover, tr.bgLight0:hover, tr.bgLight98:hover, tr.bgLight99:hover {
+    background-color: rgba(0, 250, 100, .35);
 }
 .courseLink, .courseapplieddatadiscnum {
    text-decoration:underline;
