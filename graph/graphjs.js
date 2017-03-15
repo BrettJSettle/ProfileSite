@@ -287,7 +287,7 @@ function loadGraph(){
 
 function sampleGraphSelected(v){
   document.getElementById('select-input').value = v.value;
-  $('.modal').modal('show');
+  //$('.modal').modal('show');
 }
 
 function loadSamples(){
@@ -400,6 +400,14 @@ function fromJSON(graph){
   cy.add(graph['edges']);
 }
 
+function hideModal(){
+  $('.modal').hide();
+}
+
+function showModal(){
+  $('.modal').show();
+}
+
 $(function(){
   var is = $('ul i');
   for (var i = 0; i < is.length; i++)
@@ -418,7 +426,7 @@ $(function(){
 
   cy = window.cyto = cytoscape({
     container: document.getElementById('cyto'),
-    
+
     layout: {
       'name': 'grid',
       'condense': true,

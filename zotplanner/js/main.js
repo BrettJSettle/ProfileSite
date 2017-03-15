@@ -278,6 +278,20 @@ function connectDW() {
 }
 
 $(document).ready(function() {
+    /*$("#addCodeEntry")[0].onclick = function(ev) {
+    	var code = $("#codeEntry");
+    	alert(code.val());
+    	var newOpt = $("<option>", {
+            value: code.val(),
+            text: code.val()
+    	});
+    	$(newOpt).on("click", function(a) {
+            removeRegCode(code);
+   	});
+    	$("#courseCodes").append(newOpt);
+    	code.val("");
+    };
+    */
     $("#cal").weekCalendar({
         businessHours: {
             start: 6,
@@ -474,6 +488,7 @@ $(document).ready(function() {
         });
     });
 
+
     $("#password").keydown(function(ev) {
         if (ev.keyCode == 13) {
             $("#login").click();
@@ -481,6 +496,7 @@ $(document).ready(function() {
     });
     get_search();
 });
+
 
 function loginMessage(message) {
     if ($("#login-modal")[0].style["display"] == "none") {

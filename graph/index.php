@@ -58,6 +58,9 @@
 	    loadData(type, text);
 	    return;
 	  }
+	  if (name == ""){
+	    return;
+	  }
 	  var ret = $.post('graphIO.php', {'Method': method, 'Name': name, 'Type': type, 'Text': text}, function(data, status) {
 	    if (data.startsWith('ERROR')){
 	      document.getElementById('modal-error').innerHTML = data;
@@ -75,15 +78,16 @@
     </script>
   </head>
 
-  <body>
+  
+    <body>
     <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="myModal" class="modal" role="dialog">
       <div class="modal-dialog">
 
         <!-- Modal content-->
-	      <div class="modal-content">
+	 <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" onclick='hideModal();' >&times;</button>
             <h4 class="modal-title">Save or load your graphs and code objects to share them...</h4>
           </div>
           <div class="modal-body">
@@ -103,9 +107,9 @@
 	    <textarea id='modal-text' type="text" name="Text" style="resize:none;"></textarea>
           </div>
           <div class="modal-footer">
-            <input type='button' onclick='submitted("load"); $(".close").click();' name='load' id='load' class="btn btn-default" value='Load'/>
-            <input type='button' onclick='submitted("save");' name='save' id='save' class="btn btn-default" value='Save'/>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <input type='button' onclick='submitted("load"); hideModal();' name='load' id='load' class="btn btn-default" value='Load'/>
+            <input type='button' onclick='submitted("save"); hideModal();' name='save' id='save' class="btn btn-default" value='Save'/>
+            <button type="button" onclick='hideModal();' class="btn btn-default">Close</button>
           </div>
         </div>
       </div>
@@ -114,7 +118,7 @@
     <div class="script">
       <div class='script-row'>
         <button class="row-btn btn-left btn-active" id="consoleBtn" onclick="toggleConsole();">Console</button>
-        <button id="graph-btn" onclick="cy.elements().unselect(); document.getElementById('modal-text').value=JSON.stringify(cy.json()); loadSamples();" data-toggle="modal" data-target="#myModal" class="row-btn dropdown"><i class="fa fa-save"></i>Database</button>
+        <button id="graph-btn" onclick="cy.elements().unselect(); document.getElementById('modal-text').value=JSON.stringify(cy.json()); loadSamples(); showModal();" class="row-btn dropdown"><i class="fa fa-save"></i>Database</button>
         <button class="row-btn btn-right" id="settings" onclick="toggleSettings();" title="Settings"><i class="fa fa-gear"></i>Tools</button-->
         <!--button class="row-btn btn-right" id="run" onclick="run();" title="Run...">Run</button-->
       </div><br>
@@ -214,7 +218,7 @@
       <input type="button" id='cose' value='Cose' onclick="setLayout(this.id);"/>
     </div>
 
-    <div class="frame" name='frameWindow' style="display:none;"">
+    <div class="frame" name='frameWindow' style="display:none;">
       <input type="button" value="Close" onclick="hideFrame();"/>
       <div class='frame-area' style="height:100%; width:100%">
       </div>

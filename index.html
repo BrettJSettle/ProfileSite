@@ -1,19 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
 
-Name       : Fervency 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20131006
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>The Settle Project</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
@@ -87,22 +77,22 @@ Released   : 20131006
 			<h2>Contact Me</h2>
 			<span class="byline">Email me about project ideas, feedback, or anything.</span></div>
 		<div class="content">
-			<form method="post" action="#">
+			<form method="post" action="feedback.php" enctype="text/plain">
 				<div class="row half">
 					<div class="6u">
-						<input type="text" class="text" name="name" placeholder="Name" />
+						<input type="text" class="text" name="fullname" id="tswname" placeholder="Name" />
 					</div>
 					<div class="6u">
-						<input type="text" class="text" name="email" placeholder="Email" />
+						<input type="text" class="text" name="email" id="tswemail" placeholder="Email" />
 					</div>
 				</div>
 				<div class="row half">
 					<div class="12u">
-						<textarea name="message" placeholder="Message"></textarea>
+						<textarea name="comments" id="tswcomments" placeholder="Message"></textarea>
 					</div>
 				</div>
 				<div class="row">
-					<div class="12u"> <a href="#" class="button submit">Send Message</a> </div>
+					<div class="12u"> <input type="submit" class="button submit" value="Send Message"/> </div>
 				</div>
 			</form>
 		</div>

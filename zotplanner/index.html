@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>A Better Antplanner</title>
+    <title>ZotPlanner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/jquery.weekcalendar.css">
@@ -162,7 +162,9 @@
                           </label>
                         </td>
                         <td align="center" valign="middle" style="border-left: 0;">
-                          <select id="courseCodes" name="courseCode" size="5" maxlength="5" style="width:100px" multiple>
+                          <input id="codeEntry" placeholder="Code" style="width:60px;"/>
+			  <input type="button" id="addEntryCode" onclick='addRegCode($("#codeEntry").val()); $("#codeEntry").val("")' value="Add"/> <br> 
+			  <select id="courseCodes" name="courseCode" size="5" maxlength="5" style="width:100px" multiple>
                           </select>
                         </td>
                         <td align="center" valign="middle" bgcolor="#d5e5ff">
@@ -195,7 +197,7 @@
             </tbody>
           </table>
         </form>
-        <div class="col" id="registerMessage" style="display:flex; width:85%; margin:20px auto;">
+        <div class="col" id="registerMessage" style="width:85%; margin:20px auto;">
         </div>
       </div>
       <div id="websoc-search" style="width: 90%; margin: 10px auto;">
