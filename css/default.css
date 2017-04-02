@@ -215,7 +215,6 @@
 	ul.contact
 	{
 		margin: 0;
-		padding: 2em 0em 0em 0em;
 		list-style: none;
 	}
 	
@@ -521,7 +520,7 @@
 	#copyright
 	{
 		overflow: hidden;
-		padding: 5em 0em;
+		padding: 1em 0em;
 		border-top: 1px solid rgba(255,255,255,0.08);
 	}
 	
@@ -531,13 +530,13 @@
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 0.80em;
-		color: rgba(255,255,255,0.3);
+		color: rgba(255,255,255,0.5);
 	}
 	
 	#copyright a
 	{
 		text-decoration: none;
-		color: rgba(255,255,255,0.6);
+		color: rgba(255,255,255,0.7);
 	}
 
 /*********************************************************************************/

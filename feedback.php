@@ -61,8 +61,8 @@
 $mailto = 'brettjsettle@gmail.com' ;
 $subject = "Message" ;
 $formurl = "http://thesettleproject.com" ;
-$thankyouurl = "http://thesettleproject.com" ;
-$errorurl = "http://thesettleproject.com" ;
+$thankyouurl = "http://thesettleproject.com?thanks" ;
+$errorurl = "http://thesettleproject.com?error" ;
 $want_tel_field = 0;
 $want_addr_field = 0;
 
@@ -95,12 +95,16 @@ $http_referrer = getenv( "HTTP_REFERER" );
 
 if (!isset($_POST['email'])) {
 	header( "Location: $formurl" );
+	$message = "wrong answer";
+	echo "<script type='text/javascript'>alert('$message');</script>";
 	exit ;
 }
 if (($email_is_required && (empty($email) || (substr_count($email,'@') != 1))) || (strlen($email) > 254) || preg_match("/[\s<>,'\"]/", $email) ||
 	($name_is_required && empty($fullname)) || (strlen($fullname) > 729) || preg_match("/[\r\n@<>,'\"]/", $fullname) ||
 	($comments_is_required && empty($comments))) {
 	header( "Location: $errorurl" );
+	$message = "wrong answer";
+	echo "<script type='text/javascript'>alert('$message');</script>";
 	exit ;
 }
 /*
