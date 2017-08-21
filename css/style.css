@@ -1,3 +1,37 @@
+/* background view */
+.view
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.welcome
+{
+  max-width: 800px;
+  min-height: 100px; 
+	color:white;
+	z-index: 10;
+}
+.welcome h1 {
+	font-size: 5em;
+}
+
+.welcome-separator {
+	background-color: white;
+	height: 5px;
+	width:30%;
+	display: inline-flex;	
+}
+
+
+.view {
+  background: url("../images/background.jpg")no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 
 
 /* skills */
