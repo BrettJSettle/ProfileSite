@@ -1,119 +1,351 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>The Settle Project</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-<link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" />
 
-<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="The Settle Project was created as a homepage for the projects and exploits of me, Brett Settle, throughout my career as a computer scientist" />
+    <meta name="author" content="Brett Settle">
+    
+    <title>The Settle Project</title>
+    
+		<link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    
+		<!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    
+		<!-- Custom styles for this template -->
+    <style>
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
 
-</head>
-<body>
-<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<!--span class="icon icon-fire"></span-->
-			<img src="images/igloo.png" style="width: 200px"/>
-			<h1><a href="#">The Settle Project</a></h1>
-			<span>Homepage of <a href="http://www.linkedin.com/in/brettjsettle" rel="nofollow">Brett Settle</a></span> </div>
-		<div id="menu">
-			<ul>
-				<li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
-				<li><a href="#wrapper1" accesskey="2" title="">About Me</a></li>
-				<li><a href="#wrapper3" accesskey="3" title="">Projects</a></li>
-				<li><a href="#wrapper4" accesskey="4" title="">Contact Me</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
+    </style>
 
-<div id="portfolio">
-	<div class="imageContainer" style="height:600px; background:#303030;">
-		<div class = "pickgradient">
-			<img class="aboutImage" src="images/BrettBW.png" style="height:600px;"/>
-		</div>
-		<div id="intro" class="container">
-			<div class="title">
-				<h2 style="color:white">About Me</h2>
-				<span class="byline">My Name is Brett Settle and I am a Programmer</span> </div>
-			<div class="content" style="padding-right: 0px;">
-				<p>I graduated from University of California, Irvine in March 2017 with a Bachelors in Computer Science, and am currently seeking a full time position as a software developer.  My primary development languages are Python, Java, and C/C++ as a full stack developer.  I have worked as a student assistant in a Neurobiology research lab developing analysis software in Python, a machine learning intern at Black Knight Financial Services using scikit-learn to analyze loan databases on a Hadoop cluster, and I am constantly searching for new projects and opportunities to code.</p>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        
+        <a class="navbar-brand" href="#"><img src="images/igloo.png" style="width: 40px; margin-right: 10px;"/>The Settle Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+			<!-- Welcome header -->
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h1>Welcome to The Settle Project</h1>
+					<p>My name is Brett Settle and this is my homepage.  This website acts as a dynamic CV to document all my projects, and even host some of them online.  While most of my projects are personal, there are several work-related repositories that I've kept with me through the years.  If something interests you, let me know.  I'm always looking for new projects or ways to improve old ones.</p>
+				</div>
 			</div>
-		</div>
-	</div>
 
-</div>
-<div id="wrapper1" style="background:#979046">
-	<div id="welcome" class="container">
-		<div class="title">
-			<h2>Welcome to The Settle Project</h2>
-			<span style="color:white" class="byline">A collection of miscellaneous projects by Brett Settle</span> </div>
-		<div class="content">
-			<p style="color:lightgray">I created The Settle Project in 2016, the Summer before my Senior year at UC Irvine, to host projects and share what I hope are useful tools.  I'm not a web developer, but I am trying to move my projects to a sharable domain, and I'm always looking to try new technologies.  Most of my work is just repositories on Github, but in order to broaden my experience, I created this AWS site and set out to make complete applications worth sharing.  Hope you like them!</div>
-	</div>
-</div>
+			<div class="row separator">
+			</div>
+			
+			<div class="row" id="About">
+        <div class="col-lg-4 text-left">
+          <h1 class="mt-4">About Me</h1>
+        </div>
+				<div class="col-8 text-right bg-info">
+					<p class="lead text-left">Education</p>
+          <ul class="list-unstyled">
+            <li>BS in Computer Science, University of California, Irvine, 2017</li>
+          </ul>
+					<p class="lead text-left">Experience</p>
+					<ul class="list-unstyled">
+						<li>Programmer Analyst II on the Cytoscape Core Team</li>
+						<li>Student Assistant IT in Parker-Smith Neurobiology Lab</li>
+						<li>Data Analyst Intern for Black Knigh Financial Services</li>
+					</ul>
+				</div>
+      </div>
+			
+			<div class="row separator">
+			</div>
 
-<div id="wrapper3">
-	<div id="portfolio" class="container">
-		<div class="title">
-			<h2>Projects</h2>
-			<span class="byline">A Short List Of Notable Mentions<br>
-			For More, check out <a style="text-decoration:none" href="http://www.github.com/brettjsettle">My Github</a></span> </div>
-		<div class="column1">
-			<div class="box"> <a href="http://flika-org.github.io"><img src="images/flika.png" alt="" class="image image-full" /></a>
-				<h3>Flika</h3>
-				<p>Python global image processing software written with pyqtgraph and numpy. Developed by scientists, for scientists.</p>
-				<a href="http://flika-org.github.io" class="button button-small">Check it out</a> </div>
+			<!--Skills row -->
+			<div class="row">
+				<div class="col-lg-4">
+					<h1>Skills</h1>
+				</div>
+				<div class="col-lg-8">
+					<ul id="skills">
+						<li>Python
+							<div class="progress">
+						  	<div class="progress-bar" role="progressbar" aria-valuenow="90"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
+									<span class="sr-only"></span>
+								</div>
+							</div>
+						</li>
+
+						<li>Java (Maven, OSGI, etc.)
+							<div class="progress">
+						  	<div class="progress-bar" role="progressbar" aria-valuenow="87"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:87%">
+									<span class="sr-only"></span>
+								</div>
+							</div>
+						</li>
+
+						<li>Javascript (Node, React)
+							<div class="progress">
+						  	<div class="progress-bar" role="progressbar" aria-valuenow="85"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
+									<span class="sr-only"></span>
+								</div>
+							</div>
+						</li>
+
+						<li>C/C++
+							<div class="progress">
+						  	<div class="progress-bar" role="progressbar" aria-valuenow="72"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:72%">
+									<span class="sr-only"></span>
+								</div>
+							</div>
+						</li>
+
+						<li>Git, Continuous Integration
+							<div class="progress">
+						  	<div class="progress-bar" role="progressbar" aria-valuenow="81"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:81%">
+									<span class="sr-only"></span>
+								</div>
+							</div>
+						</li>
+						
+						<li>Databases (MySQL, sqlite)
+							<div class="progress">
+						  	<div class="progress-bar" role="progressbar" aria-valuenow="77"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:77%">
+									<span class="sr-only"></span>
+								</div>
+							</div>
+						</li>
+
+						<li>UNIX
+							<div class="progress">
+						  	<div class="progress-bar" role="progressbar" aria-valuenow="85"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
+									<span class="sr-only"></span>
+								</div>
+							</div>
+						</li>
+						
+						<li>Docker
+							<div class="progress">
+						  	<div class="progress-bar" role="progressbar" aria-valuenow="73"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:73%">
+									<span class="sr-only"></span>
+								</div>
+							</div>
+						</li>
+						
+						<li>Frontend Development
+							<div class="progress">
+						  	<div class="progress-bar" role="progressbar" aria-valuenow="75"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
+									<span class="sr-only"></span>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="row separator">
+			</div>
+
+			<!-- Projects Header -->
+			<div class="row" id="Projects">
+				<div class="col-lg-12 text-center">
+					<h1>Projects</h1>
+				</div>
+			</div>
+			
+			<!--Cytograph row -->
+			<div class="row">
+				<div class="col-lg-8 text-center bg-info">
+					<p>Cytograph is a graph theory playground that enables users to quickly create mock networks and even execute javascript algorithms on networks.  Scripts and networks can be shared via an online database.</p>
+				</div>
+				<div class="col-lg-4">
+					<div id="mycarousel" class="carousel slide" data-ride="carousel">
+    				<div class="carousel-inner">
+        			<div class="item active" style="text-align:center">
+        				<a href="/graph">
+									<img src="images/cytograph.png" alt="" class="img-responsive" style="height: 200px; border: 3px solid black">
+           				<div class="carousel-caption">
+           					Cytograph
+           				</div>
+								</a>
+        			</div>
+    				</div>
+					</div>	
+				</div>
+			</div>
+
+			<!-- Flika row -->
+			<div class="row">
+				<div class="col-lg-4">
+					<div id="mycarousel" class="carousel slide" data-ride="carousel">
+    				<div class="carousel-inner">
+        			<div class="item active" style="text-align:center">
+        				<a href="http://flika-org.github.io">
+									<img src="images/flika.png" alt="" class="img-responsive" style="height: 200px; border: 3px solid black">
+           				<div class="carousel-caption">
+           					Flika
+           				</div>
+								</a>
+        			</div>
+    				</div>
+					</div>	
+				</div>
+				<div class="col-lg-8 text-center bg-info">
+					<p>Flika was developed in the Parker-Smith Molecular Biology Lab at the University of California, Irvine, as an expansion upon an automatic calcium activity analysis algorithm.  Flika was developed in Python and built to provide a wide variety of image processing tools to research labs.  The software uses pyqtgraph, numpy, and sklearn to provide a real-time interactive analysis platform for all kinds of analysis.  I also implemented a plugin and macro support system for easily replayable automated algorithms.</p>
+				</div>
+			</div>
+			
+			<!-- Zotplanner row -->
+			<div class="row">
+				<div class="col-lg-8 text-center bg-info">
+					<p>Zotplanner was created during my senior year at UC Irvine as an augmentation to the course registration process.  By merging the 3 websites used to register for classes: DegreeWorks for major requirements, AntPlanner for searching and schedule planning, and WebReg for actually registering, my webapp lets the student easily browse the available courses that they need for their degree.  UCI is now working to implement a similar system into their own website! (May break in the near future)</p>
+				</div>
+				<div class="col-lg-4">
+					<div id="mycarousel" class="carousel slide" data-ride="carousel">
+    				<div class="carousel-inner">
+        			<div class="item active" style="text-align:center">
+        				<a href="/zotplanner">
+									<img src="images/zotplanner.png" alt="" class="img-responsive" style="height: 200px; border: 3px solid black">
+           				<div class="carousel-caption">
+           					Zotplanner
+           				</div>
+        				</a>
+							</div>
+    				</div>
+					</div>	
+				</div>
+			</div>
+			
+			<!-- Redwall row -->
+			<div class="row">
+				<div class="col-lg-4">
+					<div id="mycarousel" class="carousel slide" data-ride="carousel">
+    				<div class="carousel-inner">
+        			<div class="item active" style="text-align:center">
+        				<a href="http://github.com/brettjsettle/redwall">
+									<img src="images/redwall.png" alt="" class="img-responsive" style="height: 200px; border: 3px solid black">
+           				<div class="carousel-caption">
+           					Redwall
+           				</div>
+        				</a>
+							</div>
+    				</div>
+					</div>	
+				</div>
+				<div class="col-lg-8 text-center bg-info">
+					<p>Redwall was developed as a python Reddit wallpaper scraper, and grew into a streamable image generator and rating system.  Set your wallpaper to iterate through the images on any subreddit, download them with a single button!</p>
+				</div>
+			</div>
+			
+			<!--Github Repos row -->
+			<div class="row">
+				<div class="col-lg-8 text-center bg-info">
+					<p>Checkout my github repositories to see projects spanning all the way from my very first Java course to ongoing tasks.</p>
+				</div>
+				<div class="col-lg-4">
+					<div id="mycarousel" class="carousel slide" data-ride="carousel">
+    				<div class="carousel-inner">
+        			<div class="item active" style="text-align:center">
+        				<a href="http://github.com/brettjsettle">
+									<img src="images/github.png" alt="" class="img-responsive" style="height: 200px; border: 3px solid black">
+           				<div class="carousel-caption">
+           					My Github
+           				</div>
+        				</a>
+							</div>
+    				</div>
+					</div>	
+				</div>
+			</div>
+			
+			<div class="row separator">
+			</div>
+
+			<!-- EExtracurricular Row -->
+			<div class="row">
+				<div class="col-lg-4">
+					<h2>Extracurriculars</h2>
+				</div>
+				<div class="col-lg-8">
+					<ul>
+						<li>Hockey, roller blading, ice skating and all things on wheels</li>
+						<li>Bouldering and rock climbing</li>
+					</ul>
+				</div>
+			</div>
+
 		</div>
-		<div class="column2">
-			<div class="box"> <a href="/graph"><img src="images/cytograph.png" alt="" class="image image-full" /></a>
-				<h3>CytoGraph</h3>
-				<p>Graph Theory Playground for visualizing networks, emulating traversal algorithms. Save graphs online and share them with friends.</p>
-				<a href="/graph" class="button button-small">Check it out</a> </div>
-		</div>
-		<div class="column3">
-			<div class="box"> <a href="/zotplanner"><img src="images/zotplanner.png" alt="" class="image image-full" /></a>
-				<h3>ZotPlanner</h3>
-				<p>The intersection of AntPlanner, DegreeWorks, WebSOC, and WebReg all rolled into one.  Make signing up for classes at UCI easier.</p>
-				<a href="/zotplanner" class="button button-small">Check it out</a> </div>
-		</div>
-		<div class="column4">
-			<div class="box"> <a href="http://www.github.com/brettjsettle/RedditBrowser"><img src="images/redditBrowser.jpg" alt="" class="image image-full" /></a>
-				<h3>Subreddit Screensaver</h3>
-				<p>Reddit Image scraper in Python that caches images for loadless fullscreen preview. This makes it really easy to find new wallpapers</p>
-				<a href="http://www.github.com/brettjsettle/RedditBrowser" class="button button-small">Check it out</a> </div>
-		</div><br>
-		<!--div>
-			<div class="box"> <a href="http://www.github.com/brettjsettle"><img style="float:left;" src="images/github.png" alt="" class="image image-full" /></a>
-				<h3>Github Repositories</h3>
-				<p>There are plenty of other repos and usable code in my Github. It's worth a look.</p>
-				<a href="http://www.github.com/brettjsettle" class="button button-small">Check it out</a> </div>
-		</div-->
-	</div>
-</div>
-<div id="wrapper4">
-	<div id="footer" class="container">
-		<div>
-			<header class="title">
-				<h2>Contact Me</h2>
-				<span class="byline">Send me an Email, or find me on social media</span> </header>
-			<ul class="contact">
-				<li style="margin:1em 0; font-size:130%;"><a href="mailto:brettjsettle@gmail.com">brettjsettle@gmail.com</a></li><br>
-				<li><a href="http://www.github.com/brettjsettle" class="icon icon-github"><span>Github</span></a></li>
-				<li><a href="http://www.facebook.com/brett.settle.5" class="icon icon-facebook"><span></span></a></li>
-				<li><a href="http://www.linkedin.com/in/brettjsettle" class="icon icon-linkedin"><span>LinkedIn</span></a></li>
-				<li><a href="http://gramosphere.com/user/brettjsettle/4182455264/" class="icon icon-instagram"><span>Instagram</span></a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<div id="copyright">
-	<p>Not Copyright Unless it's Copied Right | Template designed by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
-</div>
-</body>
+
+		<!-- Footer -->
+    <div class="navbar navbar-dark bg-dark bottom" id="Contact" style="margin-top: 100px; padding-bottom:20px;">
+      <div class="container">
+				<div class="text-center center-block" style="width:100%">
+					<a href="https://www.facebook.com/brett.settle.5"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+					<a href="https://linkedin.com/in/brettjsettle"><i id="social-li" class="fa fa-linkedin-square fa-3x social"></i></a>
+					<a href="https://github.com/brettjsettle"><i id="social-gh" class="fa fa-github-square fa-3x social"></i></a>
+					<a href="mailto:brettjsettle@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+				</div>
+			</div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
 </html>

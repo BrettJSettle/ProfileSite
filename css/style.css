@@ -1,0 +1,68 @@
+
+
+/* skills */
+#skills li {
+	padding: 8px 0;
+}
+
+/* all rows */
+.row {
+	margin-top:50px;
+	margin-bottom: 50px;
+	align-items: center;
+}
+
+a .carousel-caption {
+	padding: 0;
+	color:black;
+	background: white; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, transparent , white, transparent); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, transparent, white, transparent); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, transparent, white, transparent); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, transparent, white, transparent); /* Standard syntax */
+}
+
+.row.separator {
+	height: 5px;
+	background: #333;
+	margin: 0 200px;
+}
+
+
+/* footer */
+.bottom a {
+	color:white;
+}
+
+.social:hover {
+     -webkit-transform: scale(1.05);
+     -moz-transform: scale(1.05);
+     -o-transform: scale(1.05);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+     -o-transition-duration: 0.3s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-li:hover {
+     color: #4099FF;
+ }
+ #social-gh:hover {
+     color: #6e5494;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
