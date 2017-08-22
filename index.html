@@ -69,27 +69,49 @@
       </div>
     </nav>
 
-		<!--Mask-->
-		<div class="view">
-    	<div style="position:absolute; top:0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, .2);">
-			</div>
-			<!--Intro content-->
-    	<div class="text-center welcome">
-        <ul>
-          <li>
-            <h1 class="h1-responsive">Welcome</h1>
-					</li>
-					<li>
-						<div class="welcome-separator">
-						</div>
-					</li>
-					<li style="width:50%; display: inline-flex;">
-						<p>The Settle Project was created as an online resume for Brett Settle, with links to projects, work experience, and other miscellaneous experiences</p>
-					</li>
-        </ul>
-    	</div>
-    	<!--/Intro content-->
-		</div>
+		<header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="15000">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('images/background.jpg')">
+						<div class="carousel-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Welcome</h3>
+              <p>The Settle Project was created as an online résumé to showcase projects, work experience and other miscellaneous activities.</p>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('images/background2.jpg')">
+						<div class="carousel-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h3>View my projects</h3>
+              <p>Scroll down to see some of the major projects I've worked on.  From biological movie analysis to university course registration to educational webapps. The list is always growing!</p>
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('images/background3.jpg')">
+						<div class="carousel-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Contact me</h3>
+              <p>Connect with me via (almost) any social platform. I'm never too far away!</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
 
     <!-- Page Content -->
     <div class="container">
@@ -97,8 +119,7 @@
 			<!-- Welcome header -->
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h1>Welcome to The Settle Project</h1>
-					<p>My name is Brett Settle and this is my homepage.  This website acts as a dynamic CV to document all my projects, and even host some of them online.  While most of my projects are personal, there are several work-related repositories that I've kept with me through the years.  If something interests you, let me know.  I'm always looking for new projects or ways to improve old ones.</p>
+					<p>My name is Brett Settle and this is my homepage.  I am currently working as a Programmer Analyst II for the Ideker Lab at UCSD, and learning new technologies in my free time.  While most of my projects are personal, there are several work-related repositories that I've kept with me through the years.  If something interests you, let me know.  I'm always looking for new projects or ways to improve old ones.</p>
 				</div>
 			</div>
 
@@ -339,10 +360,11 @@
 			<!-- EExtracurricular Row -->
 			<div class="row">
 				<div class="col-lg-4">
-					<h2>Extracurriculars</h2>
+					<h2>Interests & Extracurriculars</h2>
 				</div>
 				<div class="col-lg-8">
 					<ul>
+						<li>Calvin and Hobbes</li>
 						<li>Hockey, roller blading, ice skating and all things on wheels</li>
 						<li>Bouldering and rock climbing</li>
 					</ul>
