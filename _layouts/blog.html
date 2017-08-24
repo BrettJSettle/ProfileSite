@@ -1,0 +1,16 @@
+{% include head.html %}
+<head>
+	<link href="/css/poole.css" rel="stylesheet">
+	<link href="/css/blog.css" rel="stylesheet">
+	<link href="/css/hyde.css" rel="stylesheet">
+</head>
+
+<body class="layout-reverse">
+	<div class="blog-container">
+		{% include sidebar.html %}
+
+		<div class="content container">
+  		{{ content }}
+		</div>
+	</div>
+</body>

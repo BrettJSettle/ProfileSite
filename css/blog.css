@@ -1,0 +1,16 @@
+.blog-container .content.container{
+	margin-left:10%;
+}
+
+.post ul {
+	list-style: initial;
+	padding-left: 40px;
+}
+
+.post p {
+	text-align: justify;
+	text-indent:1rem;
+}
+.post p img {
+	width: 100%
+}

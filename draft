@@ -1,0 +1,19 @@
+#! /bin/bash
+DATE=`date +%Y-%m-%d`
+TITLE=$1
+
+TITLE_DASHED=${TITLE// /-}
+
+FILENAME="_drafts/$DATE-$TITLE_DASHED.md"
+
+echo "---
+layout: post
+title: $TITLE
+categories: []
+tags: []
+---
+
+" > $FILENAME
+
+vim $FILENAME
+
