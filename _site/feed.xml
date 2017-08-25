@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-24T00:24:52-07:00</updated><id>http://localhost:4000/</id><title type="html">The Settle Project</title><subtitle>An online résumé for Brett Settle, developed to showcase projects, work experience, and anything else worth documenting.  The Settle Project was created after I graduated from UCI in 2017.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-24T23:24:13-07:00</updated><id>http://localhost:4000/</id><title type="html">The Settle Project</title><subtitle>An online résumé for Brett Settle, developed to showcase projects, work experience, and anything else worth documenting.  The Settle Project was created after I graduated from UCI in 2017.
 </subtitle><entry><title type="html">Welcome to the Albus Lepus</title><link href="http://localhost:4000/about/2017/08/23/Welcome-to-the-Albus-Lepus.html" rel="alternate" type="text/html" title="Welcome to the Albus Lepus" /><published>2017-08-23T00:00:00-07:00</published><updated>2017-08-23T00:00:00-07:00</updated><id>http://localhost:4000/about/2017/08/23/Welcome-to-the-Albus-Lepus</id><content type="html" xml:base="http://localhost:4000/about/2017/08/23/Welcome-to-the-Albus-Lepus.html">&lt;p&gt;&lt;img src=&quot;/images/arctic-hare.jpg&quot; alt=&quot;White Rabbit&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is the first post of my new blog, the Albus Lepus! In latin, the phrase albus lepus translates to “white rabbit”, a nickname given to me for my near-albino appearance and quickness (on roller blades).  The first person to use the latin translation mistakenly called me “albus lupus”, which actually translates to “white wolf”.  It’s unnerving to switch from predator to prey so suddenly. I suppose there’s a lesson in there somewhere.&lt;/p&gt;
@@ -13,4 +13,35 @@
   &lt;li&gt;Never lived outside of Southern California&lt;/li&gt;
   &lt;li&gt;My twin brother is in the Mathematics PhD program at Carnegie Mellon, PA, and my older sister teaches K-6 near Camp Pendleton, CA&lt;/li&gt;
   &lt;li&gt;My father named me after &lt;a href=&quot;https://en.wikipedia.org/wiki/Brett_Hull&quot;&gt;Brett Hull&lt;/a&gt;, the hockey player&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="about" /><category term="welcome" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="about" /><category term="welcome" /><summary type="html"></summary></entry><entry><title type="html">Webscrapers: API first, then UI</title><link href="http://localhost:4000/code/python/2017/08/23/Webscrapers.html" rel="alternate" type="text/html" title="Webscrapers: API first, then UI" /><published>2017-08-23T00:00:00-07:00</published><updated>2017-08-23T00:00:00-07:00</updated><id>http://localhost:4000/code/python/2017/08/23/Webscrapers</id><content type="html" xml:base="http://localhost:4000/code/python/2017/08/23/Webscrapers.html">&lt;h3 id=&quot;api-before-ui-a-webscraping-story&quot;&gt;API Before UI: A Webscraping Story&lt;/h3&gt;
+
+&lt;p&gt;I’ve spent countless hours sifting through &lt;a href=&quot;http://reddit.com/r/wallpaperdump&quot;&gt;/r/wallpaperdump&lt;/a&gt; for just the right wallpapers, downloading one in a thousand to my Wallpapers directory, and setting that desktop background to rotate through that directory.  When my roommates started pointing out how often I was browsing wallpapers, I decided to make a project out of it: &lt;a href=&quot;http://github.com/brettjsettle/redwall&quot;&gt;Redwall&lt;/a&gt;.  While plenty of web scrapers already exist, my goal was to simplify the transition from internet file to desktop background.  As with any project, there were plenty of lessons along the way:&lt;/p&gt;
+
+&lt;h5 id=&quot;open-source&quot;&gt;Open Source&lt;/h5&gt;
+&lt;p&gt;A simple search led me to &lt;a href=&quot;https://github.com/HoverHell/RedditImageGrab/tree/master/redditdownload&quot;&gt;RedditImageGrabber&lt;/a&gt; as an API to fetch post and image urls. Merged with the wallpaper setting function from &lt;a href=&quot;https://stackoverflow.com/questions/1977694/how-can-i-change-my-desktop-background-with-python&quot;&gt;this StackOverflow post&lt;/a&gt; to update your wallpaper in real time,  most of the work was done for me. All I had to do was wrap these two files into one module and BOOM! Easy. All that remained was designing the interface. Better look at some examples…&lt;/p&gt;
+
+&lt;h5 id=&quot;everything-exists-already&quot;&gt;Everything Exists Already&lt;/h5&gt;
+&lt;p&gt;Most image scrapers provide some basic filter options and show results asa giant mesh. If you click on an image it zooms in. All that jazz. But I just wanted a fullscreen image stepper that I could control with arrow keys, which somehow didn’t seem to exist. Until I stumbled on &lt;a href=&quot;http://imagoid.com&quot;&gt;imagoid&lt;/a&gt;.  A reddit image scraper for more than just wallpapers that offers fullscreen iteration with arrow keys, and it’s a webapp. (It’s seriously cool, check it out) Although I was discouraged, this project really interested me and I wanted to add my own twist.&lt;/p&gt;
+
+&lt;h5 id=&quot;straight-to-ui-aka-where-i-went-wrong&quot;&gt;Straight to UI (aka where I went wrong)&lt;/h5&gt;
+&lt;p&gt;My day job made heavy use of &lt;a href=&quot;https://riverbankcomputing.com/software/pyqt/intro&quot;&gt;PyQt&lt;/a&gt; to build windowed image analysis applications for researchers in the lab, and I loved the SDK so much I was using it everywhere. Even places it didn’t belong.  So I started designing the layout in PyQt while working on the merging the backend code.  Which reinforced the age old lesson:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Never design your API around your user interface.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Fortunately I was motivated enough to get a pretty neat result, so it all seemed worth it. I had all the functionality of a basic scraper, with background caching of images for nearly seamless scrolling.
+&lt;img src=&quot;/images/redwall_windowed_snap.PNG&quot; alt=&quot;Initial Result&quot; /&gt;
+But I was having a lot of issues with the image scraping thread fighting the GUI thread for CPU.  I needed a simpler interface. Which also meant going back and cleaning up the API.  If you are interest in the windowed version, &lt;a href=&quot;https://github.com/BrettJSettle/RedWall/tree/windowed&quot;&gt;the repo branch&lt;/a&gt; is still available.&lt;/p&gt;
+
+&lt;h5 id=&quot;simple-and-reliable&quot;&gt;Simple and reliable&lt;/h5&gt;
+&lt;p&gt;I stripped away all requirements other than BeautifulSoup, turned the image scraping into a Python iterator class, and wrote two wrappers for ease of use. Both are available via pip entry_points:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Images are shown on the desktop for 8 seconds (or whatever time specified by -i)&lt;/span&gt;
+redwall_screensaver
+
+&lt;span class=&quot;c&quot;&gt;# A command line interface to iterate through images manually, with a help menu.&lt;/span&gt;
+redwall_control
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now I can run &lt;code class=&quot;highlighter-rouge&quot;&gt;python_screensaver -i 20 --subreddit wallpaperdump&lt;/code&gt; and watch reddit wallpapers scroll by at an even pace while I’m at work.  Needless to say, after this project I was MUCH less interested in browsing wallpapers.&lt;/p&gt;
+
+&lt;p&gt;For more documentation and use cases of redwall, check out &lt;a href=&quot;http://github.com/brettjsettle/redwall&quot;&gt;the Github&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="redwall" /><category term="python" /><category term="reddit" /><summary type="html">API Before UI: A Webscraping Story</summary></entry></feed>

@@ -65,24 +65,60 @@
 		</div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Home</a>
+      <a class="sidebar-nav-item" href="">Home</a>
 
 			
 <ul class="tag-box inline">
   
   
      
+      <li><a href="#code">Code <span style="background: rgba(255, 255, 255, .2); padding: 2px; font-size: .8em;">2</span></a></li>
+     
+      <li><a href="#python">Python <span style="background: rgba(255, 255, 255, .2); padding: 2px; font-size: .8em;">1</span></a></li>
+     
       <li><a href="#about">About <span style="background: rgba(255, 255, 255, .2); padding: 2px; font-size: .8em;">1</span></a></li>
      
-      <li><a href="#blog">Blog <span style="background: rgba(255, 255, 255, .2); padding: 2px; font-size: .8em;">2</span></a></li>
-     
-      <li><a href="#code">Code <span style="background: rgba(255, 255, 255, .2); padding: 2px; font-size: .8em;">2</span></a></li>
+      <li><a href="#blog">Blog <span style="background: rgba(255, 255, 255, .2); padding: 2px; font-size: .8em;">1</span></a></li>
     
   
 
 </ul>
 
 <!--
+ 
+  <h2 id="code">Code</h2>
+  <ul class="post-list">
+      
+    
+      
+      
+      <li><a href="http://localhost:4000/blog/code/2017/08/23/The-.vimrc-Debate.html">The .vimrc Debate<span class="entry-date"><time datetime="2017-08-23T00:00:00-07:00" itemprop="datePublished">August 23, 2017</time></a></li>
+      
+      
+    
+      
+      
+      <li><a href="http://localhost:4000/code/python/2017/08/23/Webscrapers.html">Webscrapers: API first, then UI<span class="entry-date"><time datetime="2017-08-23T00:00:00-07:00" itemprop="datePublished">August 23, 2017</time></a></li>
+      
+      
+    
+    
+    
+  </ul>
+ 
+  <h2 id="python">Python</h2>
+  <ul class="post-list">
+      
+    
+      
+      
+      <li><a href="http://localhost:4000/code/python/2017/08/23/Webscrapers.html">Webscrapers: API first, then UI<span class="entry-date"><time datetime="2017-08-23T00:00:00-07:00" itemprop="datePublished">August 23, 2017</time></a></li>
+      
+      
+    
+    
+    
+  </ul>
  
   <h2 id="about">About</h2>
   <ul class="post-list">
@@ -100,32 +136,6 @@
  
   <h2 id="blog">Blog</h2>
   <ul class="post-list">
-      
-    
-      
-      
-      <li><a href="http://localhost:4000/blog/code/2017/08/23/Webscrapers.html">Webscrapers: API first, then UI<span class="entry-date"><time datetime="2017-08-23T00:00:00-07:00" itemprop="datePublished">August 23, 2017</time></a></li>
-      
-      
-    
-      
-      
-      <li><a href="http://localhost:4000/blog/code/2017/08/23/The-.vimrc-Debate.html">The .vimrc Debate<span class="entry-date"><time datetime="2017-08-23T00:00:00-07:00" itemprop="datePublished">August 23, 2017</time></a></li>
-      
-      
-    
-    
-    
-  </ul>
- 
-  <h2 id="code">Code</h2>
-  <ul class="post-list">
-      
-    
-      
-      
-      <li><a href="http://localhost:4000/blog/code/2017/08/23/Webscrapers.html">Webscrapers: API first, then UI<span class="entry-date"><time datetime="2017-08-23T00:00:00-07:00" itemprop="datePublished">August 23, 2017</time></a></li>
-      
       
     
       
@@ -152,19 +162,6 @@
   		<link href="/css/hyde.css" rel="stylesheet"/>
 
 <div class="posts">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/code/2017/08/23/Webscrapers.html">
-        Webscrapers: API first, then UI
-      </a>
-    </h1>
-
-    <span class="post-date">23 Aug 2017</span>
-
-    <h2 id="if-we-dont-learn-from-our-mistakes-we-are-doomed-to-repeat-them">If we don’t learn from our mistakes, we are doomed to repeat them.</h2>
-
-  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -205,6 +202,50 @@
   <li>My twin brother is in the Mathematics PhD program at Carnegie Mellon, PA, and my older sister teaches K-6 near Camp Pendleton, CA</li>
   <li>My father named me after <a href="https://en.wikipedia.org/wiki/Brett_Hull">Brett Hull</a>, the hockey player</li>
 </ul>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/code/python/2017/08/23/Webscrapers.html">
+        Webscrapers: API first, then UI
+      </a>
+    </h1>
+
+    <span class="post-date">23 Aug 2017</span>
+
+    <h3 id="api-before-ui-a-webscraping-story">API Before UI: A Webscraping Story</h3>
+
+<p>I’ve spent countless hours sifting through <a href="http://reddit.com/r/wallpaperdump">/r/wallpaperdump</a> for just the right wallpapers, downloading one in a thousand to my Wallpapers directory, and setting that desktop background to rotate through that directory.  When my roommates started pointing out how often I was browsing wallpapers, I decided to make a project out of it: <a href="http://github.com/brettjsettle/redwall">Redwall</a>.  While plenty of web scrapers already exist, my goal was to simplify the transition from internet file to desktop background.  As with any project, there were plenty of lessons along the way:</p>
+
+<h5 id="open-source">Open Source</h5>
+<p>A simple search led me to <a href="https://github.com/HoverHell/RedditImageGrab/tree/master/redditdownload">RedditImageGrabber</a> as an API to fetch post and image urls. Merged with the wallpaper setting function from <a href="https://stackoverflow.com/questions/1977694/how-can-i-change-my-desktop-background-with-python">this StackOverflow post</a> to update your wallpaper in real time,  most of the work was done for me. All I had to do was wrap these two files into one module and BOOM! Easy. All that remained was designing the interface. Better look at some examples…</p>
+
+<h5 id="everything-exists-already">Everything Exists Already</h5>
+<p>Most image scrapers provide some basic filter options and show results asa giant mesh. If you click on an image it zooms in. All that jazz. But I just wanted a fullscreen image stepper that I could control with arrow keys, which somehow didn’t seem to exist. Until I stumbled on <a href="http://imagoid.com">imagoid</a>.  A reddit image scraper for more than just wallpapers that offers fullscreen iteration with arrow keys, and it’s a webapp. (It’s seriously cool, check it out) Although I was discouraged, this project really interested me and I wanted to add my own twist.</p>
+
+<h5 id="straight-to-ui-aka-where-i-went-wrong">Straight to UI (aka where I went wrong)</h5>
+<p>My day job made heavy use of <a href="https://riverbankcomputing.com/software/pyqt/intro">PyQt</a> to build windowed image analysis applications for researchers in the lab, and I loved the SDK so much I was using it everywhere. Even places it didn’t belong.  So I started designing the layout in PyQt while working on the merging the backend code.  Which reinforced the age old lesson:</p>
+<blockquote>
+  <p><em>Never design your API around your user interface.</em></p>
+</blockquote>
+
+<p>Fortunately I was motivated enough to get a pretty neat result, so it all seemed worth it. I had all the functionality of a basic scraper, with background caching of images for nearly seamless scrolling.
+<img src="/images/redwall_windowed_snap.PNG" alt="Initial Result" />
+But I was having a lot of issues with the image scraping thread fighting the GUI thread for CPU.  I needed a simpler interface. Which also meant going back and cleaning up the API.  If you are interest in the windowed version, <a href="https://github.com/BrettJSettle/RedWall/tree/windowed">the repo branch</a> is still available.</p>
+
+<h5 id="simple-and-reliable">Simple and reliable</h5>
+<p>I stripped away all requirements other than BeautifulSoup, turned the image scraping into a Python iterator class, and wrote two wrappers for ease of use. Both are available via pip entry_points:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># Images are shown on the desktop for 8 seconds (or whatever time specified by -i)</span>
+redwall_screensaver
+
+<span class="c"># A command line interface to iterate through images manually, with a help menu.</span>
+redwall_control
+</code></pre>
+</div>
+<p>Now I can run <code class="highlighter-rouge">python_screensaver -i 20 --subreddit wallpaperdump</code> and watch reddit wallpapers scroll by at an even pace while I’m at work.  Needless to say, after this project I was MUCH less interested in browsing wallpapers.</p>
+
+<p>For more documentation and use cases of redwall, check out <a href="http://github.com/brettjsettle/redwall">the Github</a></p>
 
   </div>
   

@@ -4,7 +4,7 @@ email: brettjsettle@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   An online résumé for Brett Settle, developed to showcase projects, work experience, and
   anything else worth documenting.  The Settle Project was created after I graduated from UCI in 2017.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://thesettleproject.com" # the base hostname & protocol for your site, e.g. http://example.com
 username:  brettjsettle
 
