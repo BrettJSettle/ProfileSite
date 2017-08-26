@@ -1,12 +1,8 @@
 all:
 	jekyll build
-build:
-	set -e
-	jekyll build
-	git checkout master
-	cp -r _site/* .
-	rm -rf _site
+static:
+	jekyll build -d ../brettjsettle.github.io-static
 serve:
-	bindle exec jekyll serve --drafts
+	bundle exec jekyll serve --drafts
 clean:
 	rm -rf _site .sass-cache
