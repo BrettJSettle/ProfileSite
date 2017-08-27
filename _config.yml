@@ -3,13 +3,26 @@ name: Brett Settle
 email: brettjsettle@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   An online résumé for Brett Settle, developed to showcase projects, work experience, and
-  anything else worth documenting.  The Settle Project was created after I graduated from UCI in 2017.
+  anything else worth documenting.  The Settle Project was created in August 2017, after I joined the Cytoscape Core Team at the Ideker Lab, UCSD.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://thesettleproject.com" # the base hostname & protocol for your site, e.g. http://example.com
 username:  brettjsettle
 
-paginate: 5
-paginate_path: "blog/page:num/"
+footer-links:
+  dribbble:
+  email: brettjsettle@gmail.com
+  facebook: brett.settle.5
+  flickr:
+  github: brettjettle
+  instagram:
+  linkedin: brettjsettle
+  pinterest:
+  rss: # just type anything here for a working RSS icon
+  twitter:
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  youtube: # channel/<your_long_string> or user/<user-name>
+  googleplus: u/0/108626658789572132923
+
 
 # Build settings
 markdown: kramdown
