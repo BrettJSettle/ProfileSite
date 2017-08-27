@@ -103,7 +103,7 @@ a .carousel-caption {
 }
 
 
-/* footer */ 
+/* footer */
 
 .page-footer .row {
 	margin-top:20px;
@@ -114,21 +114,24 @@ a .carousel-caption {
 .page-footer p {
 	margin-bottom: .5rem;
 }
- .social {
-     -webkit-transform: scale(0.8);
-     /* Browser Variations: */
-     
-     -moz-transform: scale(0.8);
-     -o-transform: scale(0.8);
-     -webkit-transition-duration: 0.3s;
-     -moz-transition-duration: 0.3s;
-     -o-transition-duration: 0.3s;
- }
+.social {
+ -webkit-transform: scale(0.8);
+ /* Browser Variations: */
+ -moz-transform: scale(0.8);
+ -o-transform: scale(0.8);
+ -webkit-transition-duration: 0.3s;
+ -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+}
+
+.social-section a:hover {
+	text-decoration: none;
+}
 
 /*
-    Multicoloured Hover Variations
+  Multicoloured Hover Variations
 */
- 
+
 #social-fb:hover {
     color: #3B5998;
 }
