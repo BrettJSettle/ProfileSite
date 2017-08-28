@@ -1,4 +1,15 @@
 /* General */
+
+.blog-container {
+  width: 80%;
+  margin: auto;
+}
+
+.posts-container {
+  width: 80%;
+  margin: auto;
+}
+
 .blog-container a {
   color: #666;
   text-decoration: none;
@@ -43,6 +54,11 @@
 
 .blog-container p {
   margin: 15px 0;
+}
+
+.blog-container p img {
+  display: block;
+  margin: 0 auto;
 }
 
 
