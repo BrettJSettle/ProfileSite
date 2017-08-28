@@ -79,8 +79,8 @@ a .carousel-caption {
 }
 
 .row.separator {
-	height: 5px;
-	background: #333;
+	height: 2px;
+	background: #999;
 	margin: 0 200px;
 }
 
@@ -150,5 +150,8 @@ a .carousel-caption {
 }
 #social-em:hover {
     color: #f39c12;
+}
+#social-gp:hover {
+	color: #dd4b39;
 }
 

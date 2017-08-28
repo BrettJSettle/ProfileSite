@@ -1,83 +1,57 @@
 <!--Footer-->
 <footer class="page-footer stylish-color-dark">
-
     <!--Footer Links-->
     <div class="container">
-
         <!-- Footer links -->
         <div class="row text-center text-md-left mt-3 pb-3">
-
             <!--First column-->
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h3 class="title mb-4 font-bold">The Settle Project</h3>
                 <p>Hello, my name is Brett Settle and this is my homepage. Check out my old projects or see what I'm currently working on.  If you have ideas for projects, send me an email!</p>
             </div>
             <!--/.First column-->
-
             <hr class="w-100 clearfix d-md-none">
-
             <!--Second column-->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="title mb-4 font-bold">Navigation</h6>
                 <p><a href="/">Home</a></p>
                 <p><a href="/projects">Projects</a></p>
-                <p><a href="/blog">Blog</a></p>
-                <p><a href="/contact">Contact</a></p>
+                <p><a href="/blog">The Albus Lepus</a></p>
+                <p><a href="/contact">Contact Me</a></p>
+                <p><a href="/about">About</a></p>
+
             </div>
             <!--/.Second column-->
-
             <hr class="w-100 clearfix d-md-none">
-
             <!--Third column-->
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="title mb-4 font-bold">Project Links</h6>
-								<p><a href="{{ site.baseurl }}/graph">Cytograph</a></p>
-								<p><a href="{{ site.baseurl }}/vimgolf">Vim Golf</a></p>
-								<p><a href="http://flika-org.github.io">Flika</a></p>
-						</div>
+                <h6 class="title mb-4 font-bold">Recent Posts</h6>
+                {% for post in site.posts limit:5 %}
+                    <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+                {% endfor %}
+            </div>
             <!--/.Third column-->
-
             <hr class="w-100 clearfix d-md-none">
-
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 class="title mb-4 font-bold">Contact</h6>
-                <p><i class="fa fa-home mr-3"></i> San Diego, CA 92093, US</p>
-								<p><i class="fa fa-envelope mr-3"></i> <a href="mailto:brettjsettle@gmail.com">brettjsettle@gmail.com</a></p>
+                <p><i class="fa fa-home mr-3"></i> San Diego, CA</p>
+                <p><i class="fa fa-envelope mr-3"></i> <a href="mailto:{{ site.email}}">{{ site.email }}</a></p>
             </div>
-
         </div>
         <!-- Footer links -->
-
         <hr>
-
         <div class="row py-3 d-flex align-items-center" style="margin-bottom: 0">
-
             <!--Grid column-->
-            <div class="col-md-8 col-lg-9">
-
-                <p class="text-center text-md-left grey-text">Created with <a href="https://www.jekyllrb.com"><strong>Jekyll</strong></a> &amp; <a href="https://mdbootstrap.com">MDBootstrap</a>, hosted on AWS </p>
-
+            <div class="col-md-7 col-lg-8">
+                <p class="text-center text-md-left grey-text">Created with <a href="https://www.jekyllrb.com"><strong>Jekyll</strong></a> &amp; <a href="https://mdbootstrap.com">MDBootstrap</a></p>
             </div>
             <!--Grid column-->
-
-            <div class="col-md-4 col-lg-3 ml-lg-0">
-								<div class="social-section text-center text-md-left">
-										<a href="https://www.facebook.com/brett.settle.5">
-											<i id="social-fb" class="fa fa-facebook-square fa-3x social"></i>
-										</a>
-										<a href="https://linkedin.com/in/brettjsettle">
-											<i id="social-li" class="fa fa-linkedin-square fa-3x social"></i>
-										</a>
-										<a href="https://github.com/brettjsettle">
-											<i id="social-gh" class="fa fa-github-square fa-3x social"></i>
-										</a>
-										<a href="mailto:brettjsettle@gmail.com">
-											<i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
-										</a>
-								</div>
-        		</div>
-				</div>
-		</div>
-
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+                <div class="social-section text-center text-md-left">
+                    {% include footer_links.html %}
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 <!--/.Footer-->

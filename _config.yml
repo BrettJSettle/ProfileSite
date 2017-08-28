@@ -1,16 +1,18 @@
 title: The Settle Project
-name: Brett Settle
+author: Brett Settle
 email: brettjsettle@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   An online résumé for Brett Settle, developed to showcase projects, work experience, and
   anything else worth documenting.  The Settle Project was created in August 2017, after I joined the Cytoscape Core Team at the Ideker Lab, UCSD.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://thesettleproject.com" # the base hostname & protocol for your site, e.g. http://example.com
-username:  brettjsettle
+url: "http://brettjsettle.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+blog:
+  avatar: https://raw.githubusercontent.com/BrettJSettle/brettjsettle.github.io/master/images/albus_lepus.png
+  description: Programming and movie review blog for white rabbits
 
 footer-links:
   dribbble:
-  email: brettjsettle@gmail.com
   facebook: brett.settle.5
   flickr:
   github: brettjettle
@@ -23,10 +25,26 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: u/0/108626658789572132923
 
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus: brettjsettle
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics:
 
 # Build settings
 markdown: kramdown
 theme: minima
+
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
 plugins:
   - jekyll-feed
   - jekyll-paginate
