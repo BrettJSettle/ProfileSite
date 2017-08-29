@@ -1,0 +1,205 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+
+<head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="{{ site.baseurl }}/pages//projects/d3.layout.cloud.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+<script type="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+  text:hover { opacity: .7 !important; cursor: pointer; }
+</style>
+
+</head>
+
+<body>
+	<div class="container">
+		<div style="padding: 20px" class="text-center center-box">
+			<h1>Projects</h1>
+		</div>
+		<div class="entry" style="display:flex">
+			<input type="text" id="gitname" placeholder="Github username" value="BrettJSettle" />
+			<button type="button" id="button" onclick="getRepos()">show</button>
+		</div>
+		<div class="plot">
+
+		</div>
+		<div class="repo-list-container">
+			<ul class="repo-list">
+			</ul>
+		</div>
+	</div>
+<script>
+
+
+var w = "100%";
+var h = 600;
+
+var wordSize;
+var layout;
+
+function getJSON(url, callback){
+	var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+            var json = JSON.parse(xmlHttp.responseText);
+            callback(json)
+        }
+    }
+    xmlHttp.open("GET", url, true); // true for asynchronous
+    xmlHttp.send(null);
+}
+
+function getRepos(name){
+	if (name === undefined){
+		name = document.getElementById('gitname').value;
+	}
+	var token = "82a051c6c5dc1f638e2ca6e160ab076b131d43a2";
+	var url = "https://api.github.com/graphql"
+	var xhr = new XMLHttpRequest();
+	xhr.responseType = 'json';
+	xhr.open("POST", url);
+	xhr.setRequestHeader("Content-Type", "application/json");
+	xhr.setRequestHeader("Accept", "application/json");
+	xhr.setRequestHeader("Authorization", "bearer " + token);
+	xhr.onload = function () {
+		if (xhr.response.errors){
+			console.log(errors)
+		}else{
+			displayUserRepos(xhr.response.data.user);
+		}
+	}
+	var query = `{
+	user(login: "` + name + `") {
+		repositories(first: 100) {
+			edges {
+				node {
+					name,
+					descriptionHTML,
+					url,
+					updatedAt,
+					languages(first: 100) {
+						edges {
+							node {
+								name
+							}
+							size
+						}
+					}
+				}
+			}
+		}
+	}
+}
+`
+	xhr.send(JSON.stringify({query}));
+}
+
+function displayUserRepos(user){
+	var languages = {}
+	var count = 0;
+	user.repositories.edges.forEach(function(repo){
+		for(let i = 0; i < repo.node.languages.edges.length; i++){
+			var lang = repo.node.languages.edges[i]
+			if (!languages.hasOwnProperty(lang.node.name))
+				languages[lang.node.name] = lang.size
+			else
+				languages[lang.node.name] += lang.size
+		}
+		count += 1
+		if (count === user.repositories.edges.length){
+			generate(languages)
+		}
+	})
+}
+
+function generate(f_list) {
+	var newList = Object.keys(f_list)
+
+	var frequency_list = [];
+	var len = newList.length;
+	for (var i = 0; i < len; i++) {
+
+		var temp = newList[i];
+		frequency_list.push({
+			text : temp,
+			freq : f_list[newList[i]],
+			time : 0
+		});
+
+	}
+	frequency_list.sort(function(a,b) { return parseFloat(b.freq) - parseFloat(a.freq) } );
+	for(var t = 0 ; t < len ; t++)
+	{
+		var addTime = (100 * t) +500;
+		frequency_list[t].time=addTime;
+	}
+
+	var sizeScale = d3.scale.linear()
+    .domain([0, d3.max(frequency_list, function(d) { return d.freq} )])
+    .range([10, 95]); // 95 because 100 was causing stuff to be missing
+
+
+	layout = d3.layout.cloud().size([w, h])
+    .words(frequency_list)
+    .padding(5)
+    .rotate(function() { return (Math.random() * 180) - 90; })
+    .font("Impact")
+    .fontSize(function(d) {
+    	return sizeScale(d.freq);
+    })
+	.on("end",drawWordCloud)
+	.start();
+}
+
+
+var zoom = d3.behavior.zoom()
+    .scaleExtent([1, 10])
+    .on("zoom", zoomed);
+
+var svg = d3.select(".plot").append("svg")
+	    .attr("width", w)
+	    .attr("height", h)
+	    .call(zoom);
+
+function zoomed() {
+ 	svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+}
+
+function drawWordCloud(words) {
+
+	var fill = d3.scale.category20();
+	if (svg[0][0].children[0])
+		svg[0][0].children[0].remove()
+
+	var container = svg.append("g")
+    .attr("width", w)
+    .attr("height", h)
+    .attr("transform", "translate(" + [w/2, h/2] + ")")
+  	.selectAll("text")
+    .data(words)
+  	.enter().append("text")
+			.on('mouseover', function(a){ window.txt = a; })
+	.transition()
+		.duration(function(d) { return d.time}  )
+		.attr('opacity', 1)
+    	.style("font-size", function(d) { return d.size + "px"; })
+    	.style("font-family", "Impact")
+    	.style("fill", function(d, i) { return fill(i); })
+    	.attr("text-anchor", "middle")
+		.attr("transform", function(d) {
+      		return "rotate(" + d.rotate + ")";
+    	})
+    	.attr("transform", function(d) {
+      		return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+    	})
+    	.text(function(d) { return d.text; })
+}
+
+</script>
+
+</body>
