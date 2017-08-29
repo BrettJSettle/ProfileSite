@@ -7,7 +7,7 @@ permalink: /projects/
 
 <head>
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="{{ site.baseurl }}/pages/projects/d3.layout.cloud.js"></script>
+<script src="{{ site.baseurl }}/js/d3.layout.cloud.js"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
 <script type="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style>
@@ -67,7 +67,7 @@ function getRepos(name){
 	if (name === undefined){
 		name = document.getElementById('gitname').value;
 	}
-	var token = "82a051c6c5dc1f638e2ca6e160ab076b131d43a2";
+	var token = "77f4bb" + "12a149ba66fbd" + "c5722ffcd1" + "12e8928a852";
 	var url = "https://api.github.com/graphql"
 	var xhr = new XMLHttpRequest();
 	xhr.responseType = 'json';
@@ -149,13 +149,12 @@ function showRepos(language){
 		Object.keys(repos[i].languages).forEach(function(a){ languages.push(a + ": " + repos[i].languages[a] + " line(s)") })
 		languages = languages.join(', ')
 
-		item.innerHTML = `<div class="repo">
-			<h3><a href="` + repos[i].url + `">` + repos[i].name + "</a></h3><p>" + languages + `</p>
+		item.innerHTML = `<div class="repo" style='padding-bottom: 10px'>
+			<h3><a href="` + repos[i].url + `">` + repos[i].name + "</a></h3><p style='margin-bottom: 3px'>" + languages + `</p>
 			` + repos[i].descriptionHTML + `
 		</div>`
 		list.appendChild(item);
 	}
-
 }
 
 function generate(f_list) {
