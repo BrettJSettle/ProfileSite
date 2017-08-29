@@ -30,7 +30,8 @@ permalink: /projects/
 		</div>
 		<div class="entry">
 			<div class="entry-box">
-			Github username: <input type="text" id="gitname" placeholder="Github username" value="BrettJSettle" />
+			Github username: <input type="text" id="gitname" placeholder="Github username" value="BrettJSettle" 
+				onkeydown = "if (event.keyCode == 13) document.getElementById('button').click()"/>
 			<input type="button" id="button" onclick="getRepos()" value="Show" />
 			</div>
 		</div>
@@ -77,7 +78,7 @@ function getRepos(name){
 	xhr.setRequestHeader("Authorization", "bearer " + token);
 	xhr.onload = function () {
 		if (xhr.response.errors){
-			console.log(errors)
+			console.log("ERROR: " + errors)
 		}else{
 			displayUserRepos(xhr.response.data.user);
 		}
@@ -137,14 +138,12 @@ function showRepos(language){
 	let repos = repositories;
 	if (language !== undefined){
 		repos = repos.filter(function(rep) { return rep.languages.hasOwnProperty(language) });
-		repos = repos.sort(function(a){ console.log(a); return -a.languages[language] })
 	}
 	for(var i = 0; i < repos.length; i++) {
 		// Create the list item:
 		var item = document.createElement('li');
 
 		var languages = []
-		console.log(repos[i].languages)
 		window.r = repos[i]
 		Object.keys(repos[i].languages).forEach(function(a){ languages.push(a + ": " + repos[i].languages[a] + " line(s)") })
 		languages = languages.join(', ')
@@ -227,7 +226,6 @@ function drawWordCloud(words) {
   	.enter().append("text")
 			.on('mouseover', function(a){ window.txt = a; })
 			.on("mousedown", function(a) {
-				console.log(repositories, a)
 				showRepos(a.text)
 			})
 		.transition()
