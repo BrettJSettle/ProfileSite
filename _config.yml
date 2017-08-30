@@ -7,10 +7,6 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://brettjsettle.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-blog:
-  avatar: https://raw.githubusercontent.com/BrettJSettle/brettjsettle.github.io/master/images/albus_lepus.png
-  description: Programming and movie review blog for white rabbits
-
 footer-links:
   dribbble:
   facebook: brett.settle.5
