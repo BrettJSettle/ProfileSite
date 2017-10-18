@@ -30,7 +30,7 @@ google_analytics:
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-minimal
 
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
