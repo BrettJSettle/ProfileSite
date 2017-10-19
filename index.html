@@ -71,223 +71,24 @@ categories: navigation
           </ul>
 					<p class="lead text-left">Experience</p>
 					<ul class="list-unstyled">
-						<li>Programmer Analyst II on the Cytoscape Core Team, March 2017 - Present</li>
-						<li>Student Assistant IT in Parker-Smith Neurobiology Lab, October 2013 - March 2017</li>
-						<li>Data Analyst Intern for Black Knigh Financial Services, Summer 2017</li>
+						<li>Programmer Analyst II, Cytoscape Infrastructure Core Team, UCSD, March 2017 - Present</li>
+						<li>Student Assistant IT, Parker-Smith Neurobiology Lab, UCI, October 2013 - March 2017</li>
+						<li>Data Analyst Intern, Black Knigh Financial Services, Summer 2017</li>
 					</ul>
 				</div>
       </div>
-			
+
 			<div class="row separator">
 			</div>
 
 			<!--Skills row -->
-			<div class="row">
-				<div class="col-lg-4">
-					<h1>Skills</h1>
-				</div>
-				<div class="col-lg-8">
-					<ul id="skills">
-						<li>Python
-							<div class="progress">
-						  	<div class="progress-bar" role="progressbar" aria-valuenow="90"
-							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-									<span class="sr-only"></span>
-								</div>
-							</div>
-						</li>
-
-						<li>Java (Maven, OSGI, etc.)
-							<div class="progress">
-						  	<div class="progress-bar" role="progressbar" aria-valuenow="87"
-							  	aria-valuemin="0" aria-valuemax="100" style="width:87%">
-									<span class="sr-only"></span>
-								</div>
-							</div>
-						</li>
-
-						<li>Javascript (Node, React)
-							<div class="progress">
-						  	<div class="progress-bar" role="progressbar" aria-valuenow="85"
-							  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
-									<span class="sr-only"></span>
-								</div>
-							</div>
-						</li>
-
-						<li>C/C++
-							<div class="progress">
-						  	<div class="progress-bar" role="progressbar" aria-valuenow="72"
-							  	aria-valuemin="0" aria-valuemax="100" style="width:72%">
-									<span class="sr-only"></span>
-								</div>
-							</div>
-						</li>
-
-						<li>Git, Continuous Integration
-							<div class="progress">
-						  	<div class="progress-bar" role="progressbar" aria-valuenow="81"
-							  	aria-valuemin="0" aria-valuemax="100" style="width:81%">
-									<span class="sr-only"></span>
-								</div>
-							</div>
-						</li>
-						
-						<li>Databases (MySQL, sqlite)
-							<div class="progress">
-						  	<div class="progress-bar" role="progressbar" aria-valuenow="77"
-							  	aria-valuemin="0" aria-valuemax="100" style="width:77%">
-									<span class="sr-only"></span>
-								</div>
-							</div>
-						</li>
-
-						<li>UNIX
-							<div class="progress">
-						  	<div class="progress-bar" role="progressbar" aria-valuenow="85"
-							  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
-									<span class="sr-only"></span>
-								</div>
-							</div>
-						</li>
-						
-						<li>Docker
-							<div class="progress">
-						  	<div class="progress-bar" role="progressbar" aria-valuenow="73"
-							  	aria-valuemin="0" aria-valuemax="100" style="width:73%">
-									<span class="sr-only"></span>
-								</div>
-							</div>
-						</li>
-						
-						<li>Frontend Development
-							<div class="progress">
-						  	<div class="progress-bar" role="progressbar" aria-valuenow="75"
-							  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
-									<span class="sr-only"></span>
-								</div>
-							</div>
-						</li>
-
-					</ul>
-				</div>
-			</div>
+			{% include skills.html %}
 
 			<div class="row separator">
 			</div>
 
-			<!-- Projects Header -->
-			<div class="row" id="Projects">
-				<div class="col-lg-12 text-center">
-					<h1>Projects</h1>
-				</div>
-			</div>
-			
-			<!--Cytograph row -->
-			<div class="row">
-				<div class="col-lg-8 text-center row-text">
-					<p>Cytograph is a graph theory playground that enables users to quickly create mock networks and execute javascript algorithms on them.  Scripts and networks can be shared via an online database.</p>
-				</div>
-				<div class="col-lg-4">
-					<div id="mycarousel" class="carousel slide" data-ride="carousel">
-    				<div class="carousel-inner">
-        			<div class="item active" style="text-align:center">
-        				<a href="/graph">
-									<img src="images/cytograph.png" alt="" class="img-responsive" style="height: 200px; border: 3px solid black">
-           				<div class="carousel-caption">
-           					Cytograph
-           				</div>
-								</a>
-        			</div>
-    				</div>
-					</div>	
-				</div>
-			</div>
+			{% include projects.html %}
 
-			<!-- Flika row -->
-			<div class="row">
-				<div class="col-lg-4">
-					<div id="mycarousel" class="carousel slide" data-ride="carousel">
-    				<div class="carousel-inner">
-        			<div class="item active" style="text-align:center">
-        				<a href="http://flika-org.github.io">
-									<img src="images/flika.png" alt="" class="img-responsive" style="height: 200px; border: 3px solid black">
-           				<div class="carousel-caption">
-           					Flika
-           				</div>
-								</a>
-        			</div>
-    				</div>
-					</div>	
-				</div>
-				<div class="col-lg-8 text-center row-text">
-					<p>As a research assistant in the Parker-Smith Lab Molecular Biology Lab at UCI, I helped develop Flika, an expansion upon an automatic calcium activity analysis algorithm.  Written in Python and built on scientific libraries (numpy, scipy) and real-time plotting modules (pyqtgraph), Flika provides a wide variety of image processing tools to automate research.  I also implemented a plugin and macro support system for easily replayable automated algorithms.</p>
-				</div>
-			</div>
-			
-			<!-- Zotplanner row -->
-			<div class="row">
-				<div class="col-lg-8 text-center row-text">
-					<p>In my 4th year at UCI, I wrote Zotplanner to simplify course registration process.  There are 3 websites used to register for classes: DegreeWorks for major requirements, AntPlanner for searching and schedule planning, and WebReg for actually registering. Zotplanner allows students to search by the courses they need for their degree, without all the tab switching.  UCI is now working to implement a similar system into their own website! (May break in the near future)</p>
-				</div>
-				<div class="col-lg-4">
-					<div id="mycarousel" class="carousel slide" data-ride="carousel">
-    				<div class="carousel-inner">
-        			<div class="item active" style="text-align:center">
-        				<a href="/zotplanner">
-									<img src="images/zotplanner.png" alt="" class="img-responsive" style="height: 200px; border: 3px solid black">
-           				<div class="carousel-caption">
-           					Zotplanner
-           				</div>
-        				</a>
-							</div>
-    				</div>
-					</div>	
-				</div>
-			</div>
-			
-			<!-- Redwall row -->
-			<div class="row">
-				<div class="col-lg-4">
-					<div id="mycarousel" class="carousel slide" data-ride="carousel">
-    				<div class="carousel-inner">
-        			<div class="item active" style="text-align:center">
-        				<a href="http://github.com/brettjsettle/redwall">
-									<img src="images/redwall.jpg" alt="" class="img-responsive" style="height: 200px; border: 3px solid black">
-           				<div class="carousel-caption">
-           					Redwall
-           				</div>
-        				</a>
-							</div>
-    				</div>
-					</div>	
-				</div>
-				<div class="col-lg-8 text-center row-text">
-					<p>Redwall is a Reddit wallpaper scraper developed in Python, and grew into a streamable image generator and rating system.  Set your wallpaper to iterate through the images on any subreddit, and download them with ease!</p>
-				</div>
-			</div>
-			
-			<!--Github Repos row -->
-			<div class="row">
-				<div class="col-lg-8 text-center row-text">
-					<p>Checkout my github repositories to see projects spanning all the way from my very first program to my ongoing projects.</p>
-				</div>
-				<div class="col-lg-4">
-					<div id="mycarousel" class="carousel slide" data-ride="carousel">
-    				<div class="carousel-inner">
-        			<div class="item active" style="text-align:center">
-        				<a href="http://github.com/brettjsettle">
-									<img src="images/github.png" alt="" class="img-responsive" style="height: 200px; border: 3px solid black">
-           				<div class="carousel-caption">
-           					My Github
-           				</div>
-        				</a>
-							</div>
-    				</div>
-					</div>	
-				</div>
-			</div>
-			
 			<div class="row separator">
 			</div>
 

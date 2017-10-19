@@ -1,6 +1,5 @@
 ---
 layout: post
-permalink: /GoonLastOfTheEnforcers/
 title: "Goon: Last of the Enforcers, hopefully"
 categories: [movies, hockey]
 tags: [movies, goon, hockey, comedy]
