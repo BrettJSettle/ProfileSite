@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   An online résumé for Brett Settle, developed to showcase projects, work experience, and
   anything else worth documenting.  The Settle Project was created in August 2017, after I joined the Cytoscape Core Team at the Ideker Lab, UCSD.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://brettjsettle.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://thesettleproject.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 footer-links:
   dribbble:
@@ -30,7 +30,7 @@ google_analytics:
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
 
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks

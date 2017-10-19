@@ -2,8 +2,8 @@
 layout: post
 permalink: /GoonLastOfTheEnforcers/
 title: "Goon: Last of the Enforcers, hopefully"
-categories: [movie, hockey]
-tags: [movie, goon, hockey, comedy]
+categories: [movies, hockey]
+tags: [movies, goon, hockey, comedy]
 ---
 
  ![Image](https://mz-prod.s3.amazonaws.com/uploads/photo/file/304138/medium_ab34593e5d50ee9d40cacc0c171b4748-goon_last_of_the_enforcers_ver3.jpg)
