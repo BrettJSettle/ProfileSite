@@ -4,8 +4,8 @@ email: brettjsettle@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   An online résumé for Brett Settle, developed to showcase projects, work experience, and
   anything else worth documenting.
-baseurl: "/thesettleproject" # the subpath of your site, e.g. /blog
-url: "http://brettjsettle.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://brettjsettle.github.io/thesettleproject" # the base hostname & protocol for your site, e.g. http://example.com
 
 footer-links:
   dribbble:
