@@ -1,4 +1,0 @@
-[submodule "graph/cytograph"]
-	path = graph/cytograph
-	url = http://github.com/brettjsettle/cytograph
-	branch = static
