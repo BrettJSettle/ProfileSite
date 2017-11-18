@@ -1,0 +1,8 @@
+[submodule "graph"]
+	path = graph
+	url = http://github.com/brettjsettle/cytograph
+	branch = static
+[submodule "zotplanner"]
+	path = zotplanner
+	url = http://github.com/brettjsettle/zotplanner
+	branch = master
