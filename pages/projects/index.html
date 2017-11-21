@@ -132,6 +132,10 @@ function displayUserRepos(user){
 	showRepos()
 }
 
+window.addEventListener('load', function(){
+	getRepos()
+})
+
 function showRepos(language){
 	var list = document.getElementsByClassName('repo-list')[0]
 	list.innerHTML = '';
