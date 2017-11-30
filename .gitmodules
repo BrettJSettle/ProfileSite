@@ -6,3 +6,7 @@
 	path = zotplanner
 	url = http://github.com/brettjsettle/zotplanner
 	branch = master
+[submodule "vimgolf"]
+	path = vimgolf
+	url = http://github.com/brettjsettle/vimgolf
+	branch = build
