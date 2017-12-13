@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="shortcut icon" href="/thesettleproject/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="brett settle, blog, brett, rabbit, albus lepus, computer science, movie reviews, movies, code" />
+    <meta name="description" content="An online résumé for Brett Settle, developed to showcase projects, work experience, and anything else worth documenting.
+" />
+    <meta name="author" content="Brett Settle">
+    <title>The Settle Project</title>
+    <!-- theme style -->
+    <link href="/thesettleproject/css/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/thesettleproject/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/thesettleproject/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/thesettleproject/css/mdb.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/thesettleproject/css/highlight.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- Bootstrap core CSS -->
+    <link href="/thesettleproject/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <style>
+    body {
+      padding-top: 54px;
+    }
+    @media (min-width: 992px) {
+      body {
+        padding-top: 56px;
+      }
+    }
+    </style>
+  </head>
+
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container" style="width:100%">
+				<a class="navbar-brand" href="/thesettleproject/"><img src="/thesettleproject/images/igloo.png" style="width: 30px; margin-right: 10px;"/>The Settle Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li  class="nav-item"  >
+							<a class="nav-link" href="/thesettleproject/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li   class="nav-item"  >
+							<a class="nav-link" href="/thesettleproject/codecloud">CodeCloud</a>
+            </li>
+            <li   class="nav-item"  >
+							<a class="nav-link" href="/thesettleproject/blog">Blog</a>
+            </li>
+            <li   class="nav-item"  >
+              <a class="nav-link" href="/thesettleproject/contact">Contact</a>
+            </li>
+            <li   class="nav-item"  >
+              <a class="nav-link" href="/thesettleproject/about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+		<div class="content-container">
+			<head>
+  <link rel="stylesheet" type="text/css" href="/thesettleproject/css/blog.css" />
+</head>
+
+<div class="blog-container">
+  <div id="main" role="main" class="container posts-container">
+    
+
+<article class="post">
+  <h1>Redwall: Separating Frontend from Backend</h1>
+
+  <div class="entry">
+    <p>    I’ve spent countless hours sifting through <a href="http://reddit.com/r/wallpaperdump">/r/wallpaperdump</a> for just the right wallpapers, downloading one in a thousand to my Wallpapers directory, and setting the desktop background to rotate through that directory.  When my roommates started pointing out how often I was browsing wallpapers, I decided to make a project out of it: <a href="http://github.com/brettjsettle/redwall">Redwall</a>.  While plenty of web scrapers already exist, my goal was to simplify the transition from internet file to desktop background.  As with any project, there were plenty of lessons along the way:</p>
+
+<h5 id="open-source">Open Source</h5>
+<p>    A simple search led me to <a href="https://github.com/HoverHell/RedditImageGrab/tree/master/redditdownload">RedditImageGrabber</a> as an API to fetch post and image urls. Merged with the wallpaper setting function from <a href="https://stackoverflow.com/questions/1977694/how-can-i-change-my-desktop-background-with-python">this StackOverflow post</a> to update your wallpaper in real time,  most of the work was done for me. All I had to do was wrap these two files into one module and BOOM! Easy. All that remained was designing the interface. Better look at some examples…</p>
+
+<h5 id="everything-exists-already">Everything Exists Already</h5>
+<p>    Most image scrapers provide some basic filter options and show results asa giant mesh. If you click on an image it zooms in. All that jazz. But I just wanted a fullscreen image stepper that I could control with arrow keys, which somehow didn’t seem to exist. Until I stumbled on <a href="http://imagoid.com">imagoid</a>.  A reddit image scraper for more than just wallpapers that offers fullscreen iteration with arrow keys, and it’s a webapp. (It’s seriously cool, check it out) Although I was discouraged, this project really interested me and I wanted to add my own twist.</p>
+
+<h5 id="straight-to-ui-aka-where-i-went-wrong">Straight to UI (aka where I went wrong)</h5>
+<p>    My day job made heavy use of <a href="https://riverbankcomputing.com/software/pyqt/intro">PyQt</a> to build windowed image analysis applications for researchers in the lab, and I loved the SDK so much I was using it everywhere. Even places it didn’t belong.  So I started designing the layout in PyQt while working on the merging the backend code.  Which reinforced the age old lesson:</p>
+<blockquote>
+  <p><em>Never design your API around your user interface.</em></p>
+</blockquote>
+
+<p>Fortunately I was motivated enough to get a pretty neat result, so it all seemed worth it. I had all the functionality of a basic scraper, with background caching of images for nearly seamless scrolling.
+<img src="/thesettleproject/images/redwall_windowed_snap.PNG" alt="Initial Result" />
+But I was having a lot of issues with the image scraping thread fighting the GUI thread for CPU.  I needed a simpler interface. Which also meant going back and cleaning up the API.  If you are interest in the windowed version, <a href="https://github.com/BrettJSettle/RedWall/tree/windowed">the repo branch</a> is still available.</p>
+
+<h5 id="simple-and-reliable">Simple and reliable</h5>
+<p>    I stripped away all requirements other than BeautifulSoup, turned the image scraping into a Python iterator class, and wrote two wrappers for ease of use. Both are available via pip entry_points:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># Images are shown on the desktop for 8 seconds (or whatever time specified by -i)</span>
+redwall_screensaver
+
+<span class="c"># A command line interface to iterate through images manually, with a help menu.</span>
+redwall_control
+
+usage: redwall_control <span class="o">[</span>-h] <span class="o">[</span>--subreddit SUBREDDIT] <span class="o">[</span>--previd previd]
+                       <span class="o">[</span>--score score] <span class="o">[</span>--nsfwo] <span class="o">[</span>--nsfw] <span class="o">[</span>--title title]
+                       <span class="o">[</span>-i INTERVAL] <span class="o">[</span>-v]
+</code></pre>
+</div>
+<p>Now I can run <code class="highlighter-rouge">python_screensaver -i 20 --subreddit wallpaperdump</code> and watch reddit wallpapers scroll by at an even pace while I’m at work.  Needless to say, after this project I was MUCH less interested in browsing wallpapers.</p>
+
+<p>For more documentation and use cases of redwall, check out <a href="http://github.com/brettjsettle/redwall">the Github</a></p>
+
+  </div>
+
+  <div class="date">
+    Written on August 25, 2017
+  </div>
+
+  
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'brettjsettle';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+
+  </div>
+  
+
+</div>
+		</div>
+
+		<!--Footer-->
+<footer class="page-footer stylish-color-dark">
+    <!--Footer Links-->
+    <div class="container">
+        <!-- Footer links -->
+        <div class="row text-center text-md-left mt-3 pb-3">
+            <!--First column-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h3 class="title mb-4 font-bold">The Settle Project</h3>
+								<p>An online résumé for Brett Settle, developed to showcase projects, work experience, and anything else worth documenting.
+</p>
+            </div>
+            <!--/.First column-->
+            <hr class="w-100 clearfix d-md-none">
+            <!--Second column-->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="title mb-4 font-bold">Navigation</h6>
+                <p><a href="/thesettleproject">Home</a></p>
+                <p><a href="/thesettleproject/projects">Projects</a></p>
+                <p><a href="/thesettleproject/blog">My Blog</a></p>
+                <p><a href="/thesettleproject/contact">Contact Me</a></p>
+                <p><a href="/thesettleproject/about">About</a></p>
+
+            </div>
+            <!--/.Second column-->
+            <hr class="w-100 clearfix d-md-none">
+            <!--Third column-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="title mb-4 font-bold">Recent Posts</h6>
+                
+                    <p><a href="/movies/hockey/2017/09/08/Goon-Last-of-the-Enforcers.html">Goon: Last of the Enforcers, hopefully</a></p>
+                
+                    <p><a href="/code/python/2017/08/25/redwall.html">Redwall: Separating Frontend from Backend</a></p>
+                
+                    <p><a href="/welcome/2017/08/23/Welcome.html">Welcome to The Settle Project!</a></p>
+                
+            </div>
+            <!--/.Third column-->
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="title mb-4 font-bold">Contact</h6>
+                <p><i class="fa fa-home mr-3"></i> San Diego, CA</p>
+                <p><i class="fa fa-envelope mr-3"></i> <a href="mailto:brettjsettle@gmail.com">brettjsettle@gmail.com</a></p>
+            </div>
+        </div>
+        <!-- Footer links -->
+        <hr>
+        <div class="row py-3 d-flex align-items-center" style="margin-bottom: 0">
+            <!--Grid column-->
+            <div class="col-md-7 col-lg-8">
+                <p class="text-center text-md-left grey-text">Created with <a href="https://www.jekyllrb.com"><strong>Jekyll</strong></a> &amp; <a href="https://mdbootstrap.com">MDBootstrap</a></p>
+            </div>
+            <!--Grid column-->
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+                <div class="social-section text-center text-md-left">
+                    
+<a href="https://www.plsu.google.com/u/0/108626658789572132923">
+    <i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i>
+</a>
+
+
+<a href="https://www.facebook.com/brett.settle.5">
+    <i id="social-fb" class="fa fa-facebook-square fa-3x social"></i>
+</a>
+
+
+<a href="https://linkedin.com/in/brettjsettle">
+    <i id="social-li" class="fa fa-linkedin-square fa-3x social"></i>
+</a>
+
+
+<a href="https://github.com/brettjsettle">
+    <i id="social-gh" class="fa fa-github-square fa-3x social"></i>
+</a>
+
+
+<a href="https://flickr.com/photos/152867215@N08">
+    <i id="social-fl" class="fa fa-flickr fa-3x social"></i>
+</a>
+
+
+<a href="mailto:brettjsettle@gmail.com">
+    <i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
+</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--/.Footer-->
+
+
+
+    <!-- Bootstrap core JavaScript -->
+		<script src="/thesettleproject/vendor/popper/popper.min.js"></script>
+		<script src="/thesettleproject/vendor/jquery/jquery.min.js"></script>
+		<script src="/thesettleproject/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
