@@ -25,6 +25,18 @@ footer-links:
 # You can find your shortname on the Settings page of your Disqus account
 disqus: brettjsettle
 
+projects:
+  - title: Cytoscape
+    url: http://cytoscape.org
+  - title: Flika
+    url: http://flika-org.github.io
+  - title: ZotPlanner
+    url: http://thesettleproject.com/zotplanner
+  - title: CytoGraph
+    url: http://thesettleproject.com/graph
+  - title: VimGolf
+    url: http://thesettleproject.com/vimgolf
+
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 

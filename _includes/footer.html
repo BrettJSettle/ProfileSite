@@ -15,8 +15,8 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="title mb-4 font-bold">Navigation</h6>
                 <p><a href="{{site.baseurl}}">Home</a></p>
-                <p><a href="{{site.baseurl}}/projects">Projects</a></p>
-                <p><a href="{{site.baseurl}}/blog">My Blog</a></p>
+                <p><a href="{{site.baseurl}}/codecloud">CodeCloud</a></p>
+                <p><a href="https://teambabylon.github.io">Team Babylon Blog</a></p>
                 <p><a href="{{site.baseurl}}/contact">Contact Me</a></p>
                 <p><a href="{{site.baseurl}}/about">About</a></p>
 
@@ -25,13 +25,19 @@
             <hr class="w-100 clearfix d-md-none">
             <!--Third column-->
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+               	{% comment %}
                 <h6 class="title mb-4 font-bold">Recent Posts</h6>
-                {% for post in site.posts limit:5 %}
+		{% for post in site.posts limit:5 %}
                     <p><a href="{{ post.url }}">{{ post.title }}</a></p>
                 {% endfor %}
+		{% endcomment %}
+                <h6 class="title mb-4 font-bold">Popular Projects</h6>
+		{% for project in site.projects limit:5 %}
+                    <p><a href="{{ project.url }}">{{ project.title }}</a></p>
+                {% endfor %}
             </div>
-            <!--/.Third column-->
-            <hr class="w-100 clearfix d-md-none">
+            <!--/.Third column -->
+	    <hr class="w-100 clearfix d-md-none">
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 class="title mb-4 font-bold">Contact</h6>
                 <p><i class="fa fa-home mr-3"></i> San Diego, CA</p>

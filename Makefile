@@ -1,5 +1,5 @@
 all:
-	jekyll build
+	jekyll build -d /var/www/html
 gh:
 	jekyll build -c _gh_config.yml -d docs
 serve:
