@@ -12,8 +12,8 @@ permalink: /about
 
 ```
 This is my website.
-There are many like,
-it but this one is mine.
+There are many like it,
+but this one is mine.
 ```
 
 &nbsp;&nbsp;&nbsp;I created The Settle Project as a hub for my personal projects, experiences, and other miscellaneous thoughts. While much of my life is spent behind a computer, I will likely only be updating this site when I finish a new project or find something really interesting to share.
