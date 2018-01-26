@@ -38,7 +38,7 @@ projects:
     url: http://thesettleproject.com/vimgolf
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-113152810-1
 
 # Build settings
 markdown: kramdown
